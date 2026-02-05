@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0BACF4</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorOrange">#FF6600</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="colorBackground">#F0F2F5</color>
+    <color name="colorTextTitle">#222222</color>
+    <color name="colorTextContent">#666666</color>
+    <color name="colorTextHelp">#999999</color>
+    <color name="colorLineColor">#d7d7d7</color>
+    <color name="FD5A52">#FD5A52</color>
+    <color name="CE6E6E6">#E6E6E6</color>
+
+
+    <color name="common_text_color">#00d389</color>
+    <color name="app_header_color">#f54d4f</color>
+    <color name="text_color_disable">#c0c0c0</color>
+    <color name="text_color_enable">#8c8c8c</color>
+    <color name="app_button_color">#f54d4f</color>
+    <color name="app_red_text_color">#f54d4f</color>
+    <color name="app_gray_text_color">#959595</color>
+    <color name="app_black_text_color">#000000</color>
+    <color name="app_blue_text_color">#51cad8</color>
+    <color name="app_title_text_color">#fbb3b4</color>
+    <color name="app_gray_backgroud_color">#f1f1f1</color>
+    <!-- 默认界面背景色 -->
+    <color name="default_ui_bg">#ffffff</color>
+    <color name="button_text_color">#51cad8</color>
+    <color name="enable_button_text_color">#000000</color>
+    <color name="divider_color">#d2d2d2</color>
+    <color name="keyboard_press_color">#f54d4f</color>
+    <color name="keyboard_unpress_color">#ffffff</color>
+
+
+    <color name="red">#ffFF0000</color>
+    <color name="darkorange">#ffFF8C00</color>
+    <color name="green">#ff008000</color> <!-- 绿色 -->
+    <color name="orange">#ffFFA500</color><!-- 橙色 -->
+    <color name="text_black">#262424</color>
+    <color name="text_grey">#585858</color>
+
+    <color name="background">#FF303135</color>
+    <color name="main">#0082FF</color>
+    <color name="loading_tint">#949494</color>
+</resources>

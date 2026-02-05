@@ -1,0 +1,1647 @@
+<resources>
+    <string name="app_name">GcSmartPosDemo</string>
+    <string name="loading">Loading</string>
+    <string name="basic">Basic</string>
+    <string name="bank_card_title">BankCard</string>
+    <string name="read_card">ReadCard</string>
+    <string name="pin_pad">PinPad</string>
+    <string name="security">Security</string>
+    <string name="emv">EMV</string>
+    <string name="scan">Scan</string>
+    <string name="other">Other</string>
+    <string name="print">Print</string>
+
+    <string name="connect_loading">connecting to sdk</string>
+    <string name="connect_success">connect to sdk success</string>
+    <string name="connect_fail">connect to sdk fail, please exit to reconnect</string>
+    <string name="amount">Amount (cent)</string>
+    <string name="ok">OK</string>
+    <string name="card_cost_hint">Please input correct cost amount</string>
+    <string name="msg1">Please use the bank card swiping card</string>
+    <string name="msg2">Please enter the bank card password</string>
+    <string name="msg3">Please enter the supervisor password</string>
+    <string name="msg4">Please make sure the return of the amount</string>
+    <string name="basic_get_sys_param">Get system parameters</string>
+    <string name="basic_set_sys_param">Set system parameters</string>
+    <string name="basic_buzzer">Beep</string>
+    <string name="basic_led">LED lamp control</string>
+    <string name="basic_gps">Location</string>
+
+    <string name="basic_screen_mode">Set screen exclusive</string>
+    <string name="pin_anti_exhaustive_mode">PIN anti-exhaustive mode</string>
+    <string name="basic_buzzer_time_delay_hint">Please input correct delay time</string>
+    <string name="basic_buzzer_time">Buzzer time</string>
+    <string name="basic_buzzer_time_delay">delay time (200~10000 ms)</string>
+    <string name="basic_buzzer_1">1 time</string>
+    <string name="basic_buzzer_2">2 time</string>
+    <string name="basic_buzzer_3">3 time</string>
+    <string name="basic_buzzer_4">4 time</string>
+    <string name="basic_buzzer_5">5 time</string>
+    <string name="basic_buzzer_6">6 time</string>
+    <string name="cancel">Cancel</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="all_open">All Open</string>
+    <string name="all_close">All Close</string>
+
+
+    <string name="comm_wait">正在连接银联后台……"</string>
+
+    <string name="change_password_secure">修改安全密码"</string>
+    <string name="change_password_input_old">请输入原密码："</string>
+    <string name="change_password_input_new">请输入新密码："</string>
+
+    <string name="waytoofflineupload">离线上送方式</string>
+    <string name="offline_upload_time">离线上送重发次数（1–9）：</string>
+    <string name="auto_upload_accmulative_time">自动上送累计笔数：</string>
+
+    <string name="if_print_issuer">是否打印中文发卡行</string>
+    <string name="quxiao">取消</string>
+    <string name="queren">确认</string>
+    <string name="shanghuhao">商户号</string>
+    <string name="mima">密 码</string>
+    <string name="zhumiyuesuoyinhao">主密钥索引号：</string>
+    <string name="zhumiyue">主密钥：</string>
+    <string name="zhumiyuesuoyinshezhi">主密钥索引设置：</string>
+    <string name="miyuesuanfashezhi">密钥长度：</string>
+    <string name="miyuesuanfa">加密算法：</string>
+    <string name="danbeichang">单倍长</string>
+    <string name="shuangbeichang">双倍长</string>
+    <string name="guoji">国际</string>
+    <string name="guomi">国密</string>
+
+    <string name="money_over_max">输入金额过大</string>
+
+
+    <!--
+    <string name="tuihuo">退货</string>
+    <string name="yuechaxun">余额查询</string>
+    <string name="yushouquan">预授权</string>
+    -->
+    <string name="kuaishuzhifu">快速支付</string>
+
+    <string name="sign_screen">请在屏幕签字</string>
+    <string name="sign_save_fail">保存签名失败</string>
+
+    <string name="has_print">存在未打印的交易，请立即打印！</string>
+
+    <string name="shanghuming">商户名</string>
+    <string name="yingwenming">英文名</string>
+    <string name="ziyingyongming">子应用名</string>
+
+    <!-- 系统参数设置 -->
+    <!--
+    <string name="shanghuhao">商户号</string>
+    -->
+    <string name="zhongduanhao">终端号</string>
+    <string name="kahao">卡号</string>
+    <string name="jine">金额</string>
+
+    <!--
+    <string name="guanli">管理</string>
+    -->
+
+    <!--
+    <string name="yinhangkazhifu">银行卡支付</string>
+    -->
+
+    <string name="jine_maohao">金额:</string>
+    <string name="input_password">输入密码</string>
+
+    <string name="use_your_card">请使用你的银行卡</string>
+    <string name="use_your_card_by_this">请按以下方式用卡</string>
+    <string name="use_your_card_for_all">请挥卡、插卡、刷卡…</string>
+    <string name="choose_paytype">请选择收款方式</string>
+    <string name="swipe_transfer_out_card">请刷转出卡</string>
+    <string name="swipe_transfer_in_card">请刷转入卡</string>
+
+    <string name="cikaweiickadukashibai">此卡为IC卡，请插卡或挥卡</string>
+    <string name="shuakashibaiqingchongshua">刷卡失败，请重刷</string>
+
+    <string name="transation_card_number">卡号</string>
+    <string name="transation_amount">交易金额</string>
+    <string name="click_confirm_if_no_password">无密码点击确定</string>
+    <string name="transation_amount_is_empty">交易金额为空</string>
+
+    <string name="qingkong">清空</string>
+
+
+    <string name="dayinmeizi">打印缺纸</string>
+    <string name="dayinguore">打印过热</string>
+    <string name="withoutpedestal">没有底座</string>
+    <string name="dayingyichang">打印异常</string>
+    <!-- 剩余%d秒自动打印 -->
+
+    <string name="save">保存</string>
+
+    <string name="printing">交易成功</string>
+    <string name="print_ing">正在打印</string>
+    <string name="seach">正在查询</string>
+    <string name="printing_printwait">交易成功,正在打印小票中……</string>
+    <string name="upload_signature">上送电子签名……</string>
+
+    <string name="chongzhengbuchenggong">冲正不成功，请人工处理</string>
+    <string name="cidanjuzhiweishoudanjigoufenxi">此单据只为收单机构分析故障原因凭证，不得作为交易凭证</string>
+
+    <string name="chongzhengguzhangdan">冲正故障单</string>
+    <string name="dayinguzhangdan">冲正失败，打印故障单</string>
+
+
+    <string name="delete">删除</string>
+    <string name="rewrite">重写</string>
+    <string name="name_pw_is_not_null">帐号或者密码不能为空！</string>
+    <string name="Two_password_input_is_not_the_same">2次密码输入不相同！</string>
+    <string name="Save_failed">保存失败请重试！</string>
+    <string name="The_operator_to_exist">操作员已存在！</string>
+    <string name="Not_allowed_to_add">不允许添加该柜员！</string>
+    <string name="operator_is_changed">操作员修改成功！</string>
+    <string name="please_enter_the_amount">请输入金额</string>
+    <string name="Please_set_the_amount">请设置金额</string>
+    <string name="please_enter_the_fee">请输入小费</string>
+
+    <string name="shanghucanshushezhi">商户参数设置</string>
+    <string name="xitongcanshushezhi">系统参数设置</string>
+    <string name="tongxuncanshushezhi">通讯参数设置</string>
+    <string name="Please_enter_the_supervisor_password">请输入主管密码</string>
+    <string name="Password_input_error">密码输入错误</string>
+    <string name="Please_enter_date">请输入原交易日期（MMDD）</string>
+    <string name="Please_enter_authorization">请输入原授权码（6位）</string>
+    <string name="Please_enter_certificate">请输入原凭证号（6位）</string>
+    <string name="Please_enter_order_number">请输入原付款凭证号</string>
+    <string name="Please_enter_refer">请输入原参考号（12位）</string>
+    <string name="Please_enter_the_stage_periods">请输入分期期数</string>
+    <string name="Please_enter_the_code_the_items">请输入商品项目编码</string>
+    <string name="Please_enter_terminal">请输入原交易终端号</string>
+    <string name="Please_enter_batch">请输入原交易批次号</string>
+    <string name="Please_enter_card_number">请输入卡号</string>
+    <string name="Please_enter_card_validity_period">请输入卡有效期(MMYY)</string>
+    <string name="bunengchexiao">该交易不能撤销</string>
+    <string name="yichexiao">该交易已撤销</string>
+    <string name="bucunzai">该交易不存在</string>
+
+    <!-->>>>>>>>>>>>>>>>>>>>>>>>action>>>>>不是action 不要在这里面写>>>>>>>>>>>>>>>>>>> -->
+    <string name="action_consumption">消费</string>
+    <string name="action_card_consumption">插卡消费</string>
+    <string name="action_revoke">撤销</string>
+    <string name="action_refund">退货</string>
+
+    <string name="action_authorization_trading">预授权</string>
+    <string name="action_authorization_over_request">预授权完成请求</string>
+    <string name="action_authorization_over_notice">预授权完成通知</string>
+    <string name="action_authorization_undo">预授权撤销</string>
+    <string name="action_authorization_over_undo">预授权完成撤销</string>
+
+    <string name="action_print_next">重打最后一笔</string>
+    <string name="action_print_any">重打任意一笔</string>
+    <string name="action_print_detail">打印交易明细</string>
+    <string name="action_print_summary">打印交易汇总</string>
+    <string name="action_print_settlement">重打印结算</string>
+    <!--管理-->
+    <string name="action_sign">签到</string>
+    <string name="action_sign_out">POS签退</string>
+    <string name="action_query_transaction">交易查询</string>
+    <string name="action_teller">柜员</string>
+    <string name="action_settlement">结算</string>
+    <string name="action_lock_terminal">锁定终端</string>
+    <string name="action_version">版本</string>
+
+    <string name="action_sign_pos">POS签到</string>
+    <string name="action_sign_teller">操作员签到</string>
+
+    <!--<string name="action_query_detail">查询交易明细</string>-->
+    <!--<string name="action_query_summary">查询交易汇总</string>-->
+    <!--<string name="action_query_for_serial">按凭证号查询</string>-->
+    <!--<string name="action_query_for_card">按卡号查询</string>-->
+    <string name="action_query_card">银行卡交易查询</string>
+    <string name="action_query_mobile">扫码/二维码交易查询</string>
+    <string name="action_query_summary">查询交易汇总</string>
+    <!-- >>>>>>>>>>>>>>-其他-->
+    <string name="action_electronic_cash">电子现金</string>
+    <string name="action_installment">分期付款</string>
+    <!-- →电子现金-->
+    <string name="action_electronic_cash_fast_pay">快速支付</string>
+    <string name="action_electronic_cash_ordinary_pay">普通支付</string>
+    <string name="action_electronic_cash_quancun">圈存</string>
+    <string name="action_electronic_cash_query_balance">余额查询</string>
+    <string name="action_electronic_cash_query_detail">明细查询</string>
+    <string name="action_electronic_cash_offline_return">脱机退货</string>
+    <string name="action_electronic_cash_quancun_log">圈存日志</string>
+    <!-- →→圈存-->
+    <string name="action_electronic_cash_quancun_up">现金充值</string>
+    <string name="action_electronic_cash_quancun_specify">指定账户圈存</string>
+    <string name="action_electronic_cash_quancun_unspecify">非指定账户圈存</string>
+    <string name="action_electronic_cash_quancun_up_undo">现金充值撤销</string>
+    <!-- →电子钱包-->
+    <!--分期付款-->
+    <string name="action_installment_consumption">分期付款消费</string>
+    <string name="action_installment_consumption_undo">分期付款消费撤销</string>
+
+    <string name="action_query_balance">余额查询</string>
+    <!--积分-->
+    <!--手机芯片-->
+    <!--预约-->
+    <!--订购-->
+    <!--磁条卡充值-->
+    <!--设置菜单-->
+    <string name="action_setting_merchant">商户参数设置</string>
+    <string name="action_setting_transaction_management">交易管理设置</string>
+    <string name="action_setting_system">系统参数设置</string>
+    <string name="action_setting_communication">通讯参数设置</string>
+    <string name="action_setting_key">密钥管理</string>
+    <string name="action_setting_password">密码管理</string>
+    <string name="action_setting_other">其他设置</string>
+
+    <!--<<<<<<<<<<<<<<<<<<<<<<<</action<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <string name="dianzixianjinjiaoyi">电子现金类交易</string>
+    <string name="trade_input_pwd_control">交易输密控制</string>
+    <string name="fenqifukuanleijiaoyi">分期付款类交易</string>
+    <string name="chuantongjiaoyi">传统类交易</string>
+    <string name="swipcard_control">交易刷卡控制</string>
+    <string name="settlement_control">结算交易控制</string>
+    <string name="offline_trade_control">离线交易控制</string>
+    <string name="other_trade_control">其他交易控制</string>
+    <string name="input_new_pwd_again">请再次输入新密码：</string>
+    <string name="input_sys_manage_pwd">修改系统管理密码</string>
+
+    <string name="tpdu">TPDU：</string>
+    <string name="connect_time_out">超时时间：</string>
+    <string name="if_support_socket">是否支持长链接：</string>
+    <string name="if_support_ssl">是否支持SSL通讯：</string>
+
+    <string name="sign_style_param">签名版参数设置</string>
+
+    <string name="print_style">签购单打印样式</string>
+    <string name="service_hotline">服务热线号码：</string>
+    <string name="font_type">签购单字体选择：</string>
+    <string name="unkonw_issue_bank_print_name">未知发卡行打印名：</string>
+    <string name="transaction_detail_style">交易明细打印模式：</string>
+
+    <string name="ACTION_SCAN_SALE">扫码付</string>
+    <string name="action_scan_sale">扫码</string>
+    <string name="ACTION_SCAN_VOID">扫码付撤销</string>
+    <string name="ACTION_SCAN_REFUND">扫码付退货</string>
+    <string name="error_action"></string>
+    <string name="title_activity_standby_aty">待机</string>
+    <string name="title_activity_partsale">部分承兑</string>
+    <string name="clear_data_success">清除交易数据 成功</string>
+    <string name="no_data">无数据</string>
+    <string name="failed">失败</string>
+    <string name="POBC_error_code">[PBOC错误]错误码：</string>
+    <string name="IC_reject_deal">IC卡拒绝交易！</string>
+    <string name="PBOC_need_reboot">PBOC异常需要重新启动！</string>
+    <string name="custom_delay_timeout">自定义延时超时！</string>
+    <string name="save_failed">保存失败！</string>
+    <string name="save_success">保存成功！</string>
+    <string name="data_null">数据为空！</string>
+    <string name="close_manually">手动关闭</string>
+    <string name="amount_format_exception">金额格式异常</string>
+    <string name="amount_param_exception">金额参数异常</string>
+    <string name="orgin_auth_exception">原授权码参数异常</string>
+    <string name="date_param_exception">日期参数异常</string>
+    <string name="origin_ref_exception">原参考号参数异常</string>
+    <string name="origin_voucher_exception">原交易凭证号参数异常</string>
+    <string name="trade_param_error">交易类型参数错误</string>
+
+    <string name="sign_in_failed">签到失败</string>
+    <string name="trade_not_found">没有找到该笔交易！</string>
+    <string name="trade_cannot_cancel">该笔交易无法撤销！</string>
+
+    <string name="collection_and_payment">收付款</string>
+
+
+    <string name="other_function_setting">其他功能设置</string>
+    <string name="load_key_failed">加载工作密钥失败</string>
+    <string name="_if_print_again">,是否重新打印？</string>
+    <string name="print_complete_mark">打印完成！</string>
+    <string name="_if_print_next">,是否打印下一联?</string>
+    <string name="no_trade">无交易！</string>
+    <string name="print_complete">打印完成</string>
+    <string name="reprint_arbitrary_trade">重打印任意一笔</string>
+    <string name="enter_voucher_number">请输入6位凭证号</string>
+    <string name="no_match_trade">未找到匹配的交易</string>
+    <string name="no_settlement">当前没有结算单</string>
+    <string name="reprint">补打印</string>
+
+    <string name="pay_by_card">使用卡支付</string>
+    <string name="if_settlement">是否结算？</string>
+    <string name="cashier_desk">收银台</string>
+    <string name="function_under_development">功能正在开发中......</string>
+    <string name="initialize_error">初始化错误！</string>
+    <string name="module_boot_error">模块启动错误！</string>
+    <string name="trade_complete_pull_card">请拔卡！</string>
+    <string name="trade_success">交易成功！</string>
+    <string name="factor_cannot_empty">加密因子不能为空!</string>
+    <string name="no_39_data">未获取到39域数据</string>
+    <string name="continuous_upload_fail">连续上送失败</string>
+    <string name="data_source_empty">多次访问的数据源为空！</string>
+    <string name="printer_miss_paper">打印机缺纸</string>
+    <string name="printer_overheat">打印机过热</string>
+    <string name="printer_error">打印故障</string>
+    <string name="process_error">流程错误退出但是没有为设置错误属性</string>
+    <string name="camera_open_error">相机打开出错，请稍后重试</string>
+    <string name="yuan">元</string>
+    <string name="modify">修改</string>
+    <string name="success">成功</string>
+    <string name="system_manage_password">系统管理密码</string>
+    <string name="security_password">安全密码</string>
+    <string name="password_cannot_null">密码不能为空</string>
+    <string name="enter_length_of">请输入长度为</string>
+    <string name="de_password">的密码</string>
+    <string name="origin_password_wrong">原始密码错误</string>
+    <string name="password_twice_wrong">两次输入的新密码不正确</string>
+    <string name="change_password_success">修改密码成功</string>
+    <string name="clear_data">清除数据</string>
+    <string name="clear_trans_flow_success">清除交易流水成功</string>
+    <string name="clear_reverse_mark_success">清除冲正标志成功</string>
+    <string name="install_import_app">请先安装导密钥的app！</string>
+    <string name="IC_import_key">IC卡导密钥</string>
+    <string name="use_key_card">请使用你的密钥卡</string>
+    <string name="import_key_from_mother">母POS导密钥</string>
+    <string name="download_tmk_failed">下载主密钥失败！</string>
+    <string name="download_tmk_success">下载主密钥成功！</string>
+    <string name="get_success_download_fail">获取密钥成功，下载失败！</string>
+    <string name="get_key_failed">获取密钥失败！</string>
+    <string name="card_invalid">此IC卡已经失效</string>
+    <string name="enter_IC_password">请输入IC卡密码</string>
+    <string name="password_wrong">密码不对</string>
+    <string name="load_tmk_success">载入主密钥成功</string>
+    <string name="load_tmk_fail">载入主密钥失败</string>
+    <string name="auto_import">自动导入</string>
+    <string name="manual_import">手动导入</string>
+    <string name="choose_import_type">选择导入方式</string>
+    <string name="download_key_success">下载密钥成功</string>
+    <string name="use_maintain_card">请使用你的维护卡</string>
+    <string name="enter_key_card_password">请输入密钥卡密码</string>
+    <string name="enter_maintain_card_password">请输入维护卡密码</string>
+    <string name="enter_key_index">请输入密钥索引号</string>
+    <string name="remove_key_card">请移除密钥卡</string>
+    <string name="add">增加</string>
+    <string name="query_operator">查柜员</string>
+    <string name="get_data_exception">数据取出异常，请重试！</string>
+    <string name="no_account_info">目前没有账户信息！</string>
+    <string name="operator_password_manage">操作员密码管理</string>
+    <string name="enter_same_password">请输入相同的密码</string>
+    <string name="name_password_wrong">账户名或密码错误</string>
+    <string name="tmk_cannot_empty">主密钥不能为空</string>
+    <string name="check_code_cannot_empty">校验码不能为空</string>
+    <string name="manual_input_key">手输密钥</string>
+    <string name="comm_type">通讯类型</string>
+    <string name="on">开启</string>
+    <string name="off">关闭</string>
+    <string name="nopin_nosign_param">免签免密参数</string>
+    <string name="print_param">打印参数</string>
+    <string name="data_62_null">62域下发数据为空</string>
+    <string name="bin_blacklist_download">免密卡bin黑名单下载</string>
+    <string name="POS_no_param">无黑名单可更新</string>
+    <string name="process_success">处理成功</string>
+    <string name="IC_blacklist_download">IC卡黑名单下载</string>
+    <string name="querying">正在查询</string>
+    <string name="IC_public_key_download">IC卡公钥下载</string>
+    <string name="IC_key_query_fail">IC卡公钥查询失败,</string>
+    <string name="downloading">正在下载</string>
+    <string name="get_IC_key_fail">获取IC卡公钥失败</string>
+    <string name="IC_key_download_fail">IC卡公钥下载失败,</string>
+    <string name="IC_key_process_fail">IC卡公钥下载结束处理失败,</string>
+    <string name="IC_param_download">IC卡参数下载</string>
+    <string name="IC_param_query_fail">IC卡参数查询失败,</string>
+    <string name="get_IC_param_fail">获取IC卡参数失败</string>
+    <string name="IC_param_download_fail">IC卡参数下载失败,</string>
+    <string name="IC_param_process_fail">IC卡参数下载结束处理失败,</string>
+    <string name="echo_test">回响测试</string>
+    <string name="nopin_nosign_param_download">非接参数下载</string>
+    <string name="param_load">参数传递</string>
+    <string name="POS_state_upload">POS状态上传</string>
+    <string name="print_fail">打印失败！</string>
+    <string name="print_success">打印成功!</string>
+    <string name="print_success_printwait">打印成功,请妥善保存凭单</string>
+    <string name="nopin_update_bin">免密新增bin表更新下载</string>
+    <string name="test_merchant">测试商户</string>
+    <string name="already_no_trade">已经没有交易了！</string>
+    <string name="No_">第</string>
+    <string name="_item">条</string>
+    <string name="choose_pay_fee_method">请选择手续费支付方式</string>
+    <string name="pay_in_full">一次性支付</string>
+    <string name="installment_pay">分期支付</string>
+    <string name="offline_trade_upload">离线交易上送......</string>
+    <string name="offline_upload_success">离线交易上送成功</string>
+    <string name="offline_upload_fail">离线交易上送失败</string>
+    <string name="date_format_error">日期格式错误</string>
+    <string name="month_date_format_error">月份或日期格式错误</string>
+    <string name="refund_larger_than_origin">退货金额大于原消费金额</string>
+    <string name="enter_origin_voucher">请输入原凭证号(6位)</string>
+    <string name="enter_order_number">请输入原付款凭证号(20位)</string>
+    <string name="trade_fail">交易失败,</string>
+    <string name="signature_upload_success">签名上送成功！</string>
+    <string name="sign_compress_fail">签名图片压缩失败，请重试！</string>
+    <string name="communicating">通讯中……</string>
+    <string name="sending_No_">正在发送第%d笔</string>
+    <string name="_total">共%d笔</string>
+    <string name="reverse_fail">冲正失败！</string>
+    <string name="print_fail_">打印失败,</string>
+    <string name="_if_continue_print">,是否继续打印？</string>
+    <string name="confirm_partial_acceptance">请确认部分承兑交易</string>
+    <string name="accpt_Y">接受(Y)</string>
+    <string name="cancel_N">取消(N)</string>
+    <string name="downloading_main_key">正在下载主密钥，请稍候…</string>
+    <string name="wifi_open_fail">wifi打开失败，请手动打开</string>
+    <string name="configure_SSID_">配置无线网络SSID:</string>
+    <string name="_fail_open_manually">失败，请手工打开</string>
+    <string name="wifi_open_success">wifi打开成功</string>
+    <string name="wifi_open_key_downloaded">wifi已打开密钥下载成功</string>
+    <string name="connection_timeout">连接超时,检查网络</string>
+    <string name="download_key_fail">下载密钥失败</string>
+    <string name="_if_reprint">,是否重新打印？</string>
+    <string name="this_trans_not_found">未找到该笔交易！</string>
+    <string name="scan_fail">扫描失败！</string>
+    <string name="scan_cancel">扫描取消！</string>
+    <string name="scan_initialize_fail">扫描初始化失败！</string>
+    <string name="batch_uploading">批上送…</string>
+    <string name="upload_offline_trade">上送基于PBOC标准的借/贷记IC卡脱机消费成功交易</string>
+    <string name="upload_script_trade">上送IC卡脚本结果通知交易</string>
+    <string name="settlement_fail">结算失败！</string>
+    <string name="internal_card_reconciliation">内卡对账</string>
+    <string name="extenal_card_reconciliation">外卡对账</string>
+    <string name="upload_TC_error">上送基于PBOC标准的借/贷记IC卡成功交易产生的TC值错误！</string>
+    <string name="settlement">结算</string>
+    <string name="settlement_success_sign_out">结算成功,签退中…</string>
+    <string name="sign_out_fail_">签退失败,</string>
+    <string name="no_trade_at_present">当前无交易</string>
+    <string name="swipe_card_success">挥卡成功，请移卡！</string>
+    <string name="amount_">金额 :</string>
+    <string name="insert_card_from_bottom">持IC卡从机器底部插入</string>
+    <string name="swipe_card_at_right">磁卡从机器右侧从上往下刷</string>
+    <string name="ref_number_null">参考号为空！</string>
+    <string name="database_exception_retry">数据库异常，请重试！</string>
+    <string name="no_ref_of_">没有凭证号:</string>
+    <string name="_trans">的这比交易！</string>
+    <string name="operator_manage">柜员管理</string>
+    <string name="sign_out">签退</string>
+    <string name="change_password">改密码</string>
+    <string name="EC_balance">电子现金余额</string>
+    <string name="available_balance">可用余额</string>
+    <string name="username_password_cannot_null">用户名或密码错误或为空！</string>
+    <string name="read_data_error">数据读取错误请重试！</string>
+    <string name="operator_cannot_delete">该操作员不能删除</string>
+    <string name="if_delete_operator">是否删除该柜员！</string>
+    <string name="length_error">长度错误</string>
+    <string name="amount_format_error">金额格式有误</string>
+    <string name="serial_number_cannot_null">序列号不能为空!</string>
+    <string name="input_valid_info">请输入有效信息！</string>
+    <string name="please_input_">请输入</string>
+    <string name="_digits">位！</string>
+    <string name="_seconds_auto_confirm">秒后自动确认！</string>
+    <string name="trade_name">交易名称</string>
+    <string name="_1_of_2">第1/2条</string>
+    <string name="first_page">首页</string>
+    <string name="prev_page">上一页</string>
+    <string name="next_page">下一页</string>
+    <string name="last_page">尾页</string>
+    <string name="processing_wait">处理中，请等待…</string>
+    <string name="operator_number">操作员号码：</string>
+    <string name="operator_password">操作员密码：</string>
+    <string name="put_into_frame">将二维码/条码放入框中即可自动扫描</string>
+    <string name="unpaid_amount">未付金额</string>
+    <string name="zero_yuan">0.00元</string>
+    <string name="charge_separately">请另行收取</string>
+    <string name="import_key">导入密钥</string>
+    <string name="choose_import_type_">选择导入方式：</string>
+    <string name="next_step">下一步</string>
+    <string name="locked_touch">终端已经锁定\n\n触摸屏幕任意处解锁</string>
+    <string name="index_">索引号：</string>
+    <string name="main_key_">主密钥：</string>
+    <string name="check_code_">校验码：</string>
+    <string name="sever_address">服务器地址</string>
+    <string name="input_bussiness_number">输入商务号</string>
+    <string name="ready">就绪</string>
+    <string name="download_mainkey">下载主密钥</string>
+    <string name="quit">退出</string>
+    <string name="consumption_amount">消费金额</string>
+    <string name="internal_debit_money">内卡借记总金额：</string>
+    <string name="internal_debit_number">内卡借记总笔数：</string>
+    <string name="internal_credit_money">内卡贷记总金额：</string>
+    <string name="internal_credit_number">内卡贷记总笔数：</string>
+    <string name="external_debit_money">外卡借记总金额：</string>
+    <string name="external_debit_number">外卡借记总笔数：</string>
+    <string name="external_credit_money">外卡贷记总金额：</string>
+    <string name="external_credit_number">外卡贷记总笔数：</string>
+    <string name="unionpay">中国银联</string>
+    <string name="fast_loading">圈存快捷</string>
+    <string name="shortcut_key_9">快捷键9</string>
+    <string name="swipe_or_insert">请刷卡或插卡</string>
+    <string name="insert_card">插卡</string>
+    <string name="insert_from_right">持IC卡从机器右侧插入</string>
+    <string name="swipe_card">刷卡</string>
+    <string name="swipe_at_top">磁卡从上部从左往右刷</string>
+    <string name="tap_card">挥卡</string>
+    <string name="tap_card_at_top">持卡在机器上端挥动</string>
+    <string name="clear_trans_flow">清除交易流水</string>
+    <string name="clear_reverse_mark">清除冲正标志</string>
+    <string name="merchant_param">商户参数</string>
+    <string name="trade_control">交易控制</string>
+    <string name="system_control">系统控制</string>
+    <string name="comm_control">通讯控制</string>
+    <string name="version_info">版本信息</string>
+    <string name="new_password_">新密码:</string>
+    <string name="new_password_again_">重输新密码:</string>
+    <string name="backspace">回退</string>
+    <string name="receive">收款</string>
+    <string name="if_support_esign">是否支持电子签名</string>
+    <string name="wait_sign_time">等待签字时间(40–300)</string>
+    <string name="upload_sign_time">上送签字重试次数</string>
+    <string name="max_offline_trade">两笔联机交易间最大离线交易笔数</string>
+    <string name="esign_max_trade">电子签名最大交易笔数(50–200)</string>
+    <string name="esign_resign_times">电子签名重签次数</string>
+    <string name="if_enter_phone_number">是否输入手机号</string>
+    <string name="if_support_part_upload">是否支持分包上送</string>
+    <string name="comm_mode">通讯方式</string>
+    <string name="current_ip">当前使用的ip</string>
+    <string name="enter_correct_IP">请输入正确的IP地址！</string>
+    <string name="current_port">当前使用的端口</string>
+    <string name="enter_correct_port">请输入正确的端口号！</string>
+    <string name="host_IP_setting">主机IP设置</string>
+    <string name="host_port_setting">主机端口设置</string>
+    <string name="backup_IP_setting">备用IP设置</string>
+    <string name="backup_port_setting">备用端口设置</string>
+    <string name="mobile_pay_IP_setting">移动支付IP设置</string>
+    <string name="mobile_pay_port_setting">移动支付端口设置</string>
+    <string name="param_download_IP_setting">参数下载IP设置</string>
+    <string name="param_download_port_setting">参数下载端口设置</string>
+    <string name="timeout">超时时间</string>
+    <string name="enter_correct_value">请输入正确的值！</string>
+    <string name="if_support_long_connect">是否支持长链接</string>
+    <string name="support_SSL_setting">是否支持SSL通讯</string>
+    <string name="trade_resend_times">交易重发次数</string>
+    <string name="reverse_times">冲正次数</string>
+    <string name="reverse_time">冲正时间</string>
+    <string name="APN_name">APN名称</string>
+    <string name="user_name">用户名</string>
+    <string name="password">密码</string>
+    <string name="scan_timeout">扫描超时！</string>
+    <string name="if_open_custom_APN">是否开启自定义APN</string>
+    <string name="if_cancel_need_password">消费撤销是否输密</string>
+    <string name="if_installment_need_password">分期付款撤销是否输密</string>
+    <string name="auth_cancel_need_password">预授权撤销是否输密</string>
+    <string name="complete_cancel_need_password">预授权完成撤销是否输密</string>
+    <string name="complete_request_need_password">预授权完成（请求）是否输密</string>
+    <string name="merchant_EName">英文商户名</string>
+    <string name="enter_digital_number">请输入数字编号！</string>
+    <string name="if_support_nopin">是否支持免密</string>
+    <string name="nopin_max_limit">免密最大限额</string>
+    <string name="if_support_nosign">是否支持免签</string>
+    <string name="nosign_max_limit">免签最大限额</string>
+    <string name="open_table_A">是否开启A表</string>
+    <string name="open_table_B">是否开启B表</string>
+    <string name="open_bin_blacklist">是否开启bin黑名单</string>
+    <string name="open_CDCVM">是否开启CDCVM</string>
+    <string name="offline_resend_times">离线上送重发次数（1–9）</string>
+    <string name="auto_upload_times">自动上送累计笔数</string>
+    <string name="before_connect">联机前</string>
+    <string name="before_settlement">结算前</string>
+    <string name="WIFI">WIFI</string>
+    <string name="wireless">无线</string>
+    <string name="cancel_swipe_card">消费撤销是否刷卡</string>
+    <string name="complete_cancel_swipe_card">预授权完成撤销是否刷卡</string>
+    <string name="if_enter_admin_pwd">是否输入主管密码</string>
+    <string name="if_cardnumber_manual">是否允许手输卡号</string>
+    <string name="default_trade">默认刷卡交易</string>
+    <string name="refund_limit">退货限额（最大10000元）</string>
+    <string name="enter_less_than_10000">请输入10000以内的数字！</string>
+    <string name="if_track_encrypt">磁道是否加密</string>
+    <string name="auth_cardnumber_manual">预授权是否允许手输卡号</string>
+    <string name="anth_cancel_carnumber_manual">预授权撤销是否允许手输卡号</string>
+    <string name="complete_cardnumber_manual">预授权完成（请求）是否允许手输卡号</string>
+    <string name="auth_settlement_cardnumber_manual">预授权完成（通知）是否允许手输卡号</string>
+    <string name="hotline">服务热线号码</string>
+    <string name="enter_correct_phone_number">请输入正确的号码！</string>
+    <string name="choose_font_type">签购单字体选择</string>
+    <string name="font_small">小字体</string>
+    <string name="font_medium">中字体</string>
+    <string name="font_large">大字体</string>
+    <string name="unkown_issuer_name">未知发卡行打印名</string>
+    <string name="detail_print_mode">交易明细打印模式</string>
+    <string name="line_1">1行</string>
+    <string name="line_30">30行</string>
+    <string name="admin_pwd">管理员密码</string>
+    <string name="sys_manage_pwd">系统管理密码</string>
+    <string name="enter_old_pwd">请输入原密码</string>
+    <string name="enter_new_pwd">请输入新密码</string>
+    <string name="enter_new_pwd_again">请再次输入新密码</string>
+    <string name="reverse_data">冲正数据</string>
+    <string name="reverse_action">冲正action</string>
+    <string name="reverse_mark">冲正标志位</string>
+    <string name="tlk_index">保护密钥区域索引</string>
+    <string name="tmk_index">主密钥索引</string>
+    <string name="tmk">主密钥</string>
+    <string name="key_length">密钥长度</string>
+    <string name="encrypt_algorithm">加密算法</string>
+    <string name="RSA">国际</string>
+    <string name="SM">国密</string>
+    <string name="auto_sign_out">结算是否自动签退</string>
+    <string name="print_settlement_detail">结算是否打印成功明细</string>
+    <string name="print_settlement_fail_detail">结算是否打印失败明细</string>
+    <string name="serial_number">流水号</string>
+    <string name="batch_number">批次号</string>
+    <string name="if_print_acquirer">是否打印中文收单行</string>
+    <string name="enter_6_digits_number">请输入6位数字编号！</string>
+    <string name="print_number">打印联数</string>
+    <string name="scan_print_number">移动支付打印联数</string>
+    <string name="slip_print_english">签购单是否打印英文</string>
+    <string name="reverse_number">冲正重发次数（1–3次）</string>
+    <string name="user_type">身份验证类型</string>
+    <string name="tip_rate">小费比例</string>
+    <string name="enter_0_to_100">请输入0–100的整数！</string>
+    <string name="if_print_minus">撤销/退货类交易金额是否打印负号</string>
+    <string name="sign_number">签到重发次数</string>
+    <string name="max_trade_number">最大交易比数</string>
+    <string name="shield_auth_cardnumber">是否屏蔽预授权卡号</string>
+    <string name="open_IC_insale">消费内是否同时开启IC插卡消费</string>
+    <string name="open_unionpay">是否开启收银台界面</string>
+    <string name="query_balance">是否余额查询</string>
+    <string name="sale_cancel">是否消费撤消</string>
+    <string name="if_refund">是否退货</string>
+    <string name="if_sale">是否消费</string>
+    <string name="if_auth_complete">是否授权完成联机</string>
+    <string name="if_auth_cancel">是否授权撤销</string>
+    <string name="if_complete_cancel">是否完成撤销</string>
+    <string name="if_complete_connect">是否手动授权完成联机</string>
+    <string name="if_manual_auth_cancel">是否手动授权撤销</string>
+    <string name="if_manual_complete_cancel">是否手动完成撤销</string>
+    <string name="if_OQS">是否OQS</string>
+    <string name="if_receipt">是否交易回执</string>
+    <string name="input_order_mode">输入订单编号模式</string>
+    <string name="no_input">不输入</string>
+    <string name="input_scan">扫描</string>
+    <string name="input_manually">手工输入</string>
+    <string name="if_order_number_null">订单编号是否为空</string>
+    <string name="wechat_wallet">微信钱包</string>
+    <string name="wechat_print_slip">微信支付是否打印签购单</string>
+    <string name="wechat_print_logo">微信支付是否打印logo</string>
+    <string name="wechat_print_type">微信支付是否打印交易类型</string>
+    <string name="wechat_print_channel">微信支付是否打印交易渠道</string>
+    <string name="wechat_print_number">微信支付打印单据张数</string>
+    <string name="if_support_IC">是否支持IC卡</string>
+    <string name="if_support_EC">是否支持非接消费</string>
+    <string name="if_open_quickpass">是否开启非接快速交易</string>
+    <string name="quickpass_limit">非接快速交易免密限额</string>
+    <string name="nosign_limit">免签限额</string>
+    <string name="if_support_voucher_nosign">是否支持交易凭证免签</string>
+    <string name="merge_pay">合并支付</string>
+    <string name="if_print_deduction">小票是否打印权益抵扣金额</string>
+    <string name="merge_mode">合并支付收款模式</string>
+    <string name="merge_minimum_proportion">合并支付卡扣金额最小比例</string>
+    <string name="alipay_wallet">支付宝钱包</string>
+    <string name="unionpay_QR_code">银联二维码</string>
+    <string name="offline_settlement">离线结算</string>
+    <string name="settlement_adjust">结算调整</string>
+    <string name="tip">小费</string>
+    <string name="small_amount_auth">小额代授权</string>
+
+    <string name="ec_refund">电子现金脱机退货</string>
+    <string name="order_sale">订购消费</string>
+    <string name="order_sale_cancel">订购消费撤销</string>
+    <string name="order_refund">订购退货</string>
+    <string name="order_auth">订购预授权</string>
+    <string name="order_auth_cancel">订购预授权撤销</string>
+    <string name="order_auth_complete">订购预授权完成（请求）</string>
+    <string name="order_auth_settlement">订购预授权完成（通知）</string>
+    <string name="order_complete_cancel">订购预授权完成撤销</string>
+    <string name="order_verify">订购持卡人身份验证</string>
+    <string name="rf_cash">磁条卡现金充值</string>
+    <string name="rf_account">磁条卡账户充值</string>
+    <string name="union_points_sale">联盟积分消费</string>
+    <string name="issuer_points_sale">发卡行积分消费</string>
+    <string name="union_points_cancel">联盟积分消费撤销</string>
+    <string name="issuer_points_cancel">发卡行积分消费撤销</string>
+    <string name="points_query">联盟积分查询</string>
+    <string name="points_refund">联盟积分退货</string>
+    <string name="reserve_sale">预约消费</string>
+    <string name="reserve_cancel">预约消费撤销</string>
+    <string name="trade_switch">交易开关控制</string>
+    <string name="other_trade">其他类交易</string>
+    <string name="set_tmk_index">设置主密钥索引</string>
+    <string name="set_tmk">设置主密钥值</string>
+    <string name="set_DES">设置DES算法</string>
+    <string name="import_from_mother">母POS导入密钥</string>
+    <string name="import_from_GD">广东银联IC卡导密钥</string>
+    <string name="down_tmk">下载主密钥</string>
+    <string name="slip_print">签购单打印</string>
+    <string name="download_function">下载功能</string>
+    <string name="param_print">参数打印</string>
+    <string name="state_upload">状态上传</string>
+    <string name="blacklist_upload">黑名单上传</string>
+    <string name="download_EC_param">非接业务参数下载</string>
+    <string name="sign_in_success">签到成功！</string>
+    <string name="terminal_locked_sign_in">已经锁定终端，请登录后再操作！</string>
+    <string name="money_sign">￥</string>
+    <string name="collection_code">收款码</string>
+    <string name="bank_card">银行卡</string>
+    <string name="more">更多</string>
+    <string name="amount_bigger_zero">金额必须大于0！</string>
+    <string name="use_card_pay">使用卡支付</string>
+    <string name="open_sign_update">是否开启电子签名和上送</string>
+    <string name="theme">主题样式</string>
+    <string name="theme_grid">九宫格</string>
+    <string name="theme_merge">聚合支付</string>
+    <string name="ref_number">参考号</string>
+    <string name="enter_0_to_999">请输入0–999的整数！</string>
+    <string name="internal_card">内卡</string>
+    <string name="external_card">外卡</string>
+    <string name="mobile_payment">移动支付</string>
+    <string name="debit">借记</string>
+    <string name="credit">贷记</string>
+    <string name="sales_number">笔</string>
+    <string name="query_hint">待用户付款后按查询按钮查询支付结果</string>
+    <string name="btn_query">查询</string>
+    <string name="have_reverse">存在冲正，请冲正后再进行结算</string>
+    <string name="admin_login">管理员登录</string>
+
+
+    <string name="input_old_pwd">请输入旧密码</string>
+    <string name="download_encryption_key">下载报文加密密钥</string>
+    <string name="need_signature">是否需要签字</string>
+    <string name="order_number_null">订单号不存在</string>
+    <string name="confirm">确认</string>
+    <string name="input_operator_number">请输入收银员号(1–15)</string>
+    <string name="action_query_detail">查询交易明细</string>
+    <string name="action_query_for_card">银行卡号查询</string>
+    <string name="action_query_for_serial">凭证号查询</string>
+    <string name="seaching">正在查询</string>
+    <string name="set_operator_login_password">请设置4位登录密码</string>
+    <string name="action_sale_swipe">您正在使用银行卡支付,请挥卡/刷卡</string>
+    <string name="action_sale_insert">您正在使用银行卡支付,请插卡</string>
+    <string name="action_sale_default">您正在使用银行卡支付请挥卡/刷卡/插卡</string>
+    <string name="message_support_handinput">您正在使用银行卡支付请挥卡/刷卡/插卡/手输</string>
+    <string name="action_sale_confirm_card_info">请确认卡号!</string>
+    <string name="message_swiping_card">请挥卡或刷卡！</string>
+    <string name="message_swiping_success">刷卡成功,请移卡!</string>
+    <string name="message_select_application_error">选择卡应用出错，请重试！</string>
+    <string name="message_select_application_please">请选择应用</string>
+    <string name="message_pin_error">密码有误</string>
+    <string name="message_offline_auth_failed">脱机密码认证失败,交易被拒绝!</string>
+    <string name="message_retry_time_1">您还有</string>
+    <string name="message_retry_time_2">次重试机会,失败超过</string>
+    <string name="message_retry_time_3">次,卡片将锁定!</string>
+    <string name="message_error_card_locked">卡片已锁.禁止使用此卡交易</string>
+    <string name="message_net_script_uploading">脚本上送中…</string>
+    <string name="message_reverse_success">冲正成功！</string>
+    <string name="message_whether_settlement_before_signout">签退前是否结算？</string>
+    <string name="message_choice_no">否</string>
+    <string name="message_choice_yes">是</string>
+    <string name="reprint_last_trade">重打印最后一笔</string>
+    <string name="message_IcCard_trans_denied">IC卡交易拒绝,请重试!</string>
+    <string name="message_error_network_interruption">测试网络中断!</string>
+    <string name="message_error_data_pack_error">数据打包异常!</string>
+    <string name="message_error_data_prepack_error">数据预打包异常!</string>
+    <string name="message_error_network_module_error">网络模块错误</string>
+    <string name="message_error_network_no_connected">网络未连接!</string>
+    <string name="message_error_network_connection_timeout">网络连接超时!</string>
+    <string name="message_error_parameters_pack_error">参数打包错误</string>
+    <string name="message_error_online_subsequent_error">联机后续操作错误</string>
+    <string name="message_error_receive_response_fail">接收后台应答失败</string>
+    <string name="message_error_transaction_approval">交易成功</string>
+    <string name="message_error_contact_issuing_bank">请持卡人与发卡银行联系</string>
+    <string name="message_error_invalid_merchant">无效商户</string>
+    <string name="message_error_invalid_card">此卡为无效卡（POS）</string>
+    <string name="message_error_cardholder_authentication_failed">持卡人认证失败</string>
+    <string name="message_error_show_partial_approval_amount">显示部分批准金额，提示操作员</string>
+    <string name="message_error_vip_customer">此为VIP客户</string>
+    <string name="message_error_invalid_transaction">无效交易</string>
+    <string name="message_error_invalid_amount">无效金额</string>
+    <string name="message_error_invalid_card_number">无效卡号</string>
+    <string name="message_error_no_corresponding_issuer_bank">此卡无对应发卡方</string>
+    <string name="message_error_card_not_initialized_or_in_sleep">该卡未初始化或睡眠卡</string>
+    <string name="message_error_exceeded_allowed_days">操作有误，或超出交易允许天数</string>
+    <string name="message_error_no_original_transaction">没有原始交易，请联系发卡方</string>
+    <string name="message_error_please_retry">请重试</string>
+    <string name="message_error_cheating_card">作弊卡、吞卡</string>
+    <string name="message_error_password_error_time_exceeded">密码错误次数超限</string>
+
+    <string name="emv_err_exception_err">异常错误</string>
+    <string name="emv_err_no_dev">无检测到设备</string>
+    <string name="emv_err_inserted_iccard">检测到插卡</string>
+    <string name="emv_err_icc_swiped_magcard">检测到刷卡</string>
+    <string name="emv_err_icc_inserted_picc">检测到挥卡</string>
+    <string name="emv_err_icc_mutil_inserted_picc">检测到多个非接卡</string>
+    <string name="emv_err_approval">交易成功</string>
+    <string name="emv_err_icc_reset">读卡异常</string>
+    <string name="emv_err_icc_cmd">IC卡读卡命令有误</string>
+    <string name="emv_err_icc_block">卡片已锁</string>
+    <string name="emv_err_icc_error">发生错误，交易终止</string>
+    <string name="emv_err_no_app">应用未找到</string>
+    <string name="emv_err_timeout">超时</string>
+    <string name="emv_err_cancle">交易取消</string>
+    <string name="emv_err_app_block">应用被锁</string>
+    <string name="emv_err_not_accept">卡片未批准</string>
+    <string name="emv_err_denial">交易拒绝</string>
+    <string name="emv_err_key_exp">密钥过期</string>
+    <string name="emv_err_no_pinpad">密码键盘不能使用</string>
+    <string name="emv_err_no_password">无密码</string>
+    <string name="emv_err_sum_err">公钥校验错误</string>
+    <string name="emv_err_not_found">指定数据未找到</string>
+    <string name="emv_err_no_data">指定数据为空</string>
+    <string name="emv_err_overflow">内存溢出</string>
+    <string name="emv_err_needusersel">需要用户的选择</string>
+    <string name="emv_err_ped_goon">emv_ped_goon</string>
+    <string name="emv_err_cid_err">CID不一致</string>
+    <string name="emv_err_need_online">需要联机交易</string>
+    <string name="emv_err_need_online_ec">需要电子现金联机交易</string>
+    <string name="emv_err_data_exist">数据已存在</string>
+    <string name="emv_err_file_err">文件错误</string>
+    <string name="emv_err_pin_block">密码锁定</string>
+    <string name="emv_err_no_record">记录文件不存在</string>
+    <string name="emv_err_rsp_6985">IC卡返回3985</string>
+    <string name="emv_err_lastrecord_err">记录文件错误</string>
+    <string name="emv_err_only_ec">电子现金卡</string>
+    <string name="emv_err_return_denial">退货AAC</string>
+    <string name="emv_err_no_trans_log">无交易日志</string>
+    <string name="emv_err_record_notexist">无交易记录</string>
+    <string name="emv_err_logitem_notexist">日志中不存在该项</string>
+
+
+    <string name="emv_err_need_otherchanl">此卡已损坏,请降级交易</string>
+    <string name="emv_err_app_overdue">应用过期</string>
+    <string name="emv_err_app_noteffect">无效应用</string>
+    <string name="emv_err_app_inblacklist">该卡已列入黑名单</string>
+    <string name="emv_err_app_needonlinepin">需要联机PIN</string>
+    <string name="emv_err_app_onlinepinerr">输入PIN错误</string>
+    <string name="emv_err_app_ddafailed">不支持DDA</string>
+    <string name="emv_err_app_selqpboc">go qpboc flow</string>
+    <string name="emv_err_app_selstdpboc">go with lend credit</string>
+    <string name="emv_err_app_needtoonlinetrans">需要联机交易</string>
+    <string name="emv_err_app_transdenil">交易拒绝</string>
+    <string name="emv_err_app_transend">交易结束</string>
+    <string name="emv_err_app_gpo">go gpo flow</string>
+    <string name="emv_err_no_pdol">无PDOL</string>
+    <string name="emv_err_app_blancelimit">余额不足</string>
+    <string name="emv_err_ter_terminates">交易终止</string>
+    <string name="message_error_transaction_not_supported_by_issuer">发卡方不支持的交易</string>
+    <string name="message_error_lost_card">挂失卡（POS）</string>
+    <string name="message_error_stolen_card">被窃卡（POS）</string>
+    <string name="message_error_use_chip_card_please">请使用芯片卡</string>
+    <string name="message_error_balance_available">可用余额不足</string>
+    <string name="message_error_card_expired">该卡已过期</string>
+    <string name="message_error_pin_error">密码错</string>
+    <string name="message_error_card_transaction_not_allowed">不允许此卡交易</string>
+    <string name="message_error_terminal_transaction_not_allowed_by_issuer">发卡方不允许该卡在本终端进行此交易</string>
+    <string name="message_error_card_verify_error">卡片校验错</string>
+    <string name="message_error_transaction_amout_overrun">交易金额超限</string>
+    <string name="message_error_restricted_card">受限制的卡</string>
+    <string name="message_error_transaction_amount_not_match">交易金额与原交易不匹配</string>
+    <string name="message_error_exceeded_withdrawal_limit">超出取款次数限制</string>
+    <string name="message_error_transaction_timeout">交易超时，请重试</string>
+    <string name="message_error_trans_fail">系统日切，请稍候重试</string>
+    <string name="message_error_repeat_transaction">拒绝，重复交易，请稍候重试</string>
+    <string name="message_error_issuer_exception">拒绝，交换中心异常，请稍候重试</string>
+    <string name="message_error_terminal_not_registered">终端号未登记</string>
+    <string name="message_error_issuer_timeout">发卡方超时</string>
+    <string name="message_error_pin_format_error">PIN格式错，请重新签到</string>
+    <string name="message_error_mac_parity_error">MAC校验错，请重新签到</string>
+    <string name="message_error_currency_inconsistent">转账货币不一致</string>
+    <string name="message_error_transaction_successful_need_confirm">交易成功，请向资金转入行确认</string>
+    <string name="message_error_bank_account_incorrect">资金到账行账号不正确</string>
+    <string name="message_error_security_processing_failed">安全处理失败</string>
+    <string name="message_error_response_data_error">服务器返回数据错误</string>
+    <string name="message_error_transaction_amount_exceeded">交易金额超限</string>
+    <string name="message_error_unpack_error">数据解包异常！</string>
+    <string name="message_error_get_mac_error">解析mac数据错误</string>
+    <string name="message_error_calc_mac_error">获取硬件mac数据错误</string>
+    <string name="message_error_no_mac">mac获取失败</string>
+    <string name="message_error_mac_check_error">mac校验错误</string>
+    <string name="message_error_iso_encrypt_error">报文加密错误</string>
+    <string name="message_error_no_iso_encryption_key">报文加密密钥为空，请下载报文加密密钥</string>
+    <string name="message_error_pboc_error">pboc错误</string>
+    <string name="message_error_pboc_declined">IC卡交易拒绝</string>
+    <string name="message_error_pboc_refresh_listener_error">pboc监听替换错误</string>
+    <string name="message_error_pboc_script_error">pboc脚本处理失败</string>
+    <string name="message_error_printer_start_error">打印机启动失败</string>
+    <string name="message_error_print_data_error">打印数据异常</string>
+    <string name="message_error_printer_no_paper">打印机缺纸</string>
+    <string name="message_error_printer_overheat">打印机过热</string>
+    <string name="message_error_need_dock_station">缺少底座</string>
+    <string name="message_error_printer_unknown">打印机未知错误</string>
+    <string name="message_error_led_start_error">LED启动失败</string>
+    <string name="message_error_wrong_led_parameters">LED参数异常</string>
+    <string name="message_error_led_open_fail">LED无法打开</string>
+    <string name="message_error_led_close_fail">LED无法关闭</string>
+    <string name="message_error_led_flash_fail">LED无法闪烁</string>
+    <string name="message_error_process_canceled">交易流程取消</string>
+    <string name="message_error_process_exception">交易流程异常退出</string>
+    <string name="message_error_process_parameters_wrong">交易流程参数传递异常</string>
+    <string name="message_error_process_end">后续无流程</string>
+    <string name="message_error_process_part">连续上送失败</string>
+    <string name="message_error_running_exception">运行时异常</string>
+    <string name="message_error_running_load_work_key_fail">加载工作密钥失败</string>
+    <string name="message_error_database_not_found">数据未找到</string>
+    <string name="message_error_database_encrypt_wrong">数据加密出错</string>
+
+
+    <string name="message_error_enter_password_timeout">获取密码超时</string>
+    <string name="message_error_enter_password_error">获取密码出错</string>
+    <string name="message_error_user_cancle">用户取消</string>
+    <string name="message_print_pos_receipt">银联POS签购单</string>
+    <string name="message_print_amount_not_exceed">交易金额未超过</string>
+    <string name="message_print_no_pin_no_signature">元，免密免签</string>
+    <string name="message_print_no_pin">元，免密</string>
+    <string name="message_print_no_signature">元，免签</string>
+    <string name="message_manage_operator_switch">收银员开关</string>
+    <string name="message_manage_add_operator">添加收银员</string>
+    <string name="message_manage_delete_operator_confirm">确定删除收银员</string>
+    <string name="message_delete_success">删除成功！</string>
+    <string name="message_delete_fail">删除失败！</string>
+    <string name="message_back">返回</string>
+    <string name="message_manage_input_admin_password">请输入管理员密码</string>
+    <string name="message_manage_password_consist_8_digits">管理员密码由8位数字组成</string>
+    <string name="message_manage_password_error">密码错误！</string>
+    <string name="message_operator_account_password_cannot_null">帐号或密码不能为空！</string>
+    <string name="message_operator_add_not_allowed">不允许添加该柜员！</string>
+    <string name="message_operator_account_illegal">收银员号非法！</string>
+    <string name="message_operator_input_4_digits_pwd">请输入4位登录密码！</string>
+    <string name="message_operator_add_success">收银员添加成功</string>
+    <string name="message_operator_already_exist">收银员已存在！</string>
+    <string name="message_operator_save_fail_retry">保存失败请重试！</string>
+    <string name="message_query_cardno">银行卡号</string>
+    <string name="message_query_cardno_input">请输入16-19位数字</string>
+    <string name="message_query_input_12_digits_number">请输入12位参考号</string>
+    <string name="message_query_start_date">开始日期</string>
+    <string name="message_query_end_date">截止日期</string>
+    <string name="message_query_trans_detail">交易信息</string>
+    <string name="message_query_all">全部</string>
+    <string name="message_query_wechat">微信</string>
+    <string name="message_query_alipay">支付宝</string>
+    <string name="message_query_trade_success">交易成功</string>
+    <string name="message_query_revoked">已撤销</string>
+    <string name="message_query_trade_fail">交易未成功</string>
+    <string name="message_query_trade_amount">交易金额：</string>
+    <string name="message_query_trade_cardno">交易卡号：</string>
+    <string name="message_query_trade_time">交易时间：</string>
+    <string name="message_query_trade_type">交易类型：</string>
+    <string name="message_query_trade_status">交易状态：</string>
+    <string name="message_query_batchno">批次号：</string>
+    <string name="message_query_voucherno">凭证号：</string>
+    <string name="message_query_referno">参考号：</string>
+    <string name="message_query_pay_type">支付方式：</string>
+    <string name="message_query_wechat_pay">微信支付</string>
+    <string name="message_settlement_print_detail">是否打印结算明细单</string>
+    <string name="message_settlement_print_fail_detail">是否打印失败明细单</string>
+    <string name="message_query_date_select_wrong">日期选择错误!</string>
+    <string name="action_code_pay">二维码收款</string>
+    <string name="action_scan_pay">扫码收款</string>
+    <string name="message_query_trans">笔</string>
+    <string name="message_query_summary">汇总查询</string>
+    <string name="message_settlement_fair">平</string>
+    <string name="message_settlement_injustice">不平</string>
+    <string name="message_settlement_error">出错</string>
+    <string name="message_settlement_cards">刷卡</string>
+    <string name="message_settlement_oversea_cards">外卡</string>
+    <string name="message_settlement_scan">扫码</string>
+    <string name="message_settlement_recharge">充值</string>
+    <string name="message_settlement_settle">对账</string>
+    <string name="message_settlement_receipt">结算总计单</string>
+    <string name="message_summary_receipt">交易汇总单</string>
+    <string name="message_manage_change_operator_pwd">收银员密码修改</string>
+    <string name="message_manage_input_old_pwd">请输入原密码</string>
+    <string name="message_manage_input_4_digits">收银员密码由4位数字组成</string>
+    <string name="message_manage_set_new_pwd">请设置你的新密码</string>
+    <string name="message_manage_operator_wrong_old_pwd">原密码错误！</string>
+    <string name="message_operator_set_new_pwd_again">请再输入一次新密码</string>
+    <string name="message_operator_ensure_pwd_same">请保证两次密码输入一致</string>
+    <string name="message_manage_database_error">数据库异常，请重试！</string>
+    <string name="message_manage_modify_success">修改成功</string>
+    <string name="message_manage_different_pwd">请重新输入 两次输入的密码不一致</string>
+    <string name="message_manage_operator">收银员</string>
+    <string name="message_param_no_pin_limit">免密限额</string>
+    <string name="message_param_no_pin_flag">免密标识</string>
+    <string name="message_param_binA_flag">binA标识</string>
+    <string name="message_param_binB_flag">binB标识</string>
+    <string name="message_param_binC_flag">binC标识</string>
+    <string name="message_param_cdcvm_flag">CDCVM标识</string>
+    <string name="message_param_no_sign_limit">免签限额</string>
+    <string name="message_param_no_sign_flag">免签标识</string>
+    <string name="message_input_correct_cardno">请输入正确的卡号！</string>
+    <string name="message_scan_sale_no_need_signature">扫码付免签名</string>
+    <string name="message_swipe_card_first">交易请先刷卡</string>
+    <string name="message_input_card_no">点击此处输入卡号</string>
+    <string name="message_insert_card">插卡</string>
+
+
+    <!--/****************/-->
+
+    <string name="hello_world">Hello world!</string>
+    <string name="header_title">APPT</string>
+
+    <!-- 初始化设备 -->
+
+
+    <!-- 拔卡 -->
+    <string name="pull_card">请拔卡...</string>
+    <!-- 移卡 -->
+    <string name="remove_card">请移卡...</string>
+
+    <!-- 终端签到 -->
+    <string name="pos_logon">终端签到</string>
+
+    <!-- 终端签退 -->
+    <string name="pos_logout">终端签退</string>
+
+    <!-- 消费 -->
+    <string name="sale_trans">消费</string>
+    <string name="bankcard_pay_insert_sale">插卡消费</string>
+    <string name="sale_scan">扫码消费</string>
+
+    <!-- 消费撤销 -->
+    <string name="void_trans">消费撤销</string>
+
+    <!-- 预授权 -->
+    <string name="auth_trans">预授权</string>
+    <string name="auth_trans_liff">预授权</string>
+    <!-- 预授权撤销 -->
+    <string name="auth_void">预授权撤销</string>
+    <!-- 预授权完成请求 -->
+    <string name="auth_cm">预授权完成请求</string>
+    <string name="auth_cm_req">完成请求</string>
+    <!-- 预授权完成通知 -->
+    <string name="auth_cm_adv_all">预授权完成通知</string>
+    <string name="auth_cm_adv">完成通知</string>
+    <!-- 预授权完成撤销 -->
+    <string name="auth_cm_void_all">预授权完成撤销</string>
+    <string name="auth_cm_void">完成撤销</string>
+
+    <!-- 持卡人手机号码 -->
+    <string name="enter_phone_num">请输入持卡人手机号码</string>
+    <!-- 卡号查询 -->
+    <string name="trans_readcard">卡号查询</string>
+
+    <!-- 离线类交易 -->
+    <string name="offline_trans">离线交易</string>
+    <string name="offline_settle">离线结算</string>
+    <string name="settle_adjust">结算调整</string>
+    <string name="select_auth_mode">请选择授权方式</string>
+    <string name="input_orig_auth_code">请输入原授权码</string>
+    <string name="input_auth_inst_code">请输入授权机构代码</string>
+    <string name="select_inter_code">请选择国际信用卡公司代码</string>
+    <string name="auth_mode_pos">POS</string>
+    <string name="auth_mode_phone">电话</string>
+    <string name="auth_mode_small">小额代授权</string>
+
+    <!-- 国际信用卡组织代码 -->
+    <string name="cup">CUP</string>
+    <string name="vis">VIS</string>
+    <string name="mcc">MCC</string>
+    <string name="mae">MAE</string>
+    <string name="jcb">JCB</string>
+    <string name="dcc">DCC</string>
+    <string name="amx">AMX</string>
+
+    <!-- 电子现金 -->
+    <string name="electronic_cash">电子现金</string>
+    <string name="ec_sale">电子现金消费</string>
+    <string name="ec_load">圈存</string>
+    <string name="ec_cash_balance">电子现金余额查询</string>
+    <string name="ec_balance">余额查询</string>
+    <string name="ec_detail">明细查询</string>
+    <string name="ec_load_detail">圈存明细</string>
+    <string name="ec_offline_refund">脱机退货</string>
+    <string name="ec_trans_liff">电子现金</string>
+    <string name="ec_commodity">商品和服务</string>
+    <string name="ec_cash">现金</string>
+    <string name="ec_adjust">调整</string>
+    <string name="ec_cheque_guarantee">支票担保</string>
+    <string name="ec_cheque_verify">支票核实</string>
+    <string name="ec_cheque_europe">欧洲支票</string>
+    <string name="ec_cheque_travel">旅行支票</string>
+    <string name="ec_credit">信用证</string>
+    <string name="ec_giro">直接转账</string>
+    <string name="ec_commodity_cash">现金支付的商品和服务</string>
+
+    <string name="ec_deposit">存款</string>
+    <string name="ec_adjusted">调整</string>
+    <string name="ec_cheque_cash_guarantee">支票存款担保</string>
+    <string name="ec_cheque_cash">支票存款</string>
+    <string name="ec_balance_available">可用余额查询</string>
+    <string name="ec_id_verify">账户验证</string>
+    <string name="ec_id_transfer">持卡人账户转账</string>
+
+    <!-- 电子现金明细查询结果 -->
+    <string name="ec_details_query">电子现金明细查询</string>
+    <string name="ic_trans_log">IC卡交易记录</string>
+    <string name="ec_log_total_num">总计:条</string>
+    <string name="ec_trans_type">交易类型:</string>
+    <string name="ec_atc">ATC:</string>
+    <string name="ec_date">交易日期:</string>
+    <string name="ec_time">交易时间:</string>
+    <string name="ec_trans_amount">交易金额:</string>
+    <string name="ec_other_amount">其他金额:</string>
+    <string name="ec_country_code">国家代码:</string>
+    <string name="ec_currency_code">货币代码:</string>
+
+    <!-- 电子现金脱机退货 -->
+    <string name="ec_cash_refund">电子现金脱机退货</string>
+    <string name="ec_orig_term_id">原交易终端号</string>
+    <string name="ec_orig_batch_no">原交易批次号</string>
+    <string name="ec_orig_trans_no">原交易流水号</string>
+    <string name="ec_orig_date">原交易日期</string>
+    <string name="prompt_err_term_id">终端号不足8位,请核对!</string>
+    <string name="prompt_err_batch_no">原交易批次号不能为空 </string>
+    <string name="prompt_err_trans_no">原交易流水号不能为空</string>
+
+    <!-- 圈存 -->
+    <string name="qc_cash_charge">现金充值</string>
+    <string name="qc_cash_charge_void">现金充值撤销</string>
+    <string name="qc_allocated_account">指定账户圈存</string>
+    <string name="qc_non_allocated_account">非指定账户圈存</string>
+    <string name="qc_transfer_out_card">请使用转出卡</string>
+    <string name="qc_transfer_in_card">请使用转入卡(电子现金卡)</string>
+
+    <!-- 圈存日志 -->
+    <string name="ecload_p1">P1:</string>
+    <string name="ecload_p2">P2:</string>
+    <string name="ecload_beforeAmount">圈存前金额:</string>
+    <string name="ecload_afterAmount">圈存后金额:</string>
+    <string name="ecload_date">日期:</string>
+    <string name="ecload_countryCode">国家代码:</string>
+    <string name="ecload_merchName">商户名称:</string>
+    <string name="ecload_atc">交易计数器:</string>
+
+    <!-- TransType 相关信息 -->
+    <string name="emv_mon_ca">EMV公钥查询</string>
+    <string name="emv_ca_down">EMV公钥下载</string>
+    <string name="emv_ca_down_end">EMV公钥下载结束通知</string>
+    <string name="emv_mon_param">EMV参数查询</string>
+    <string name="emv_param_down">EMV参数下载</string>
+    <string name="echo">回响功能</string>
+    <string name="param_transmit">参数传递</string>
+    <string name="emv_param_down_end">EMV参数下载结束通知</string>
+    <string name="black_down">黑名单下载</string>
+    <string name="black_down_end">黑名单下载结束通知</string>
+    <string name="ic_scr_send">IC卡脚本结果上送</string>
+    <string name="download_param">参数下载</string>
+    <string name="picc_download_param">非接参数下载</string>
+    <string name="bin_b_download">BIN表B下载</string>
+    <string name="bin_b_download_end">BIN表B下载结束通知</string>
+    <string name="bin_c_download">BIN表C下载</string>
+    <string name="bin_c_download_end">BIN表C下载结束通知</string>
+    <string name="picc_download_param_end">非接参数下载结束通知</string>
+    <string name="settle">批结算</string>
+    <string name="batch_up">批上送</string>
+    <string name="batch_up_end">批上送结束</string>
+    <string name="offline_trans_send">脱机交易上送</string>
+    <string name="sign_send">电子签名上送</string>
+    <string name="offline_trans_send_bat">脱机交易批上送</string>
+
+    <!-- 余额查询 -->
+    <string name="trans_balance">余额查询</string>
+    <string name="balance_prompt">卡内余额</string>
+
+    <!-- 交易查询 >>交易汇总 -->
+    <string name="trans_total">交易汇总</string>
+    <string name="trans_query">交易查询</string>
+    <string name="inner_card">内卡</string>
+    <string name="outer_card">外卡</string>
+    <string name="borrow_amount">借记笔数</string>
+    <string name="borrow_money">借记金额</string>
+    <string name="loan_amount">贷记笔数</string>
+    <string name="loan_money">贷记金额</string>
+
+    <!-- 交易查询 >>交易详情 -->
+    <string name="trans_detail">交易详情</string>
+    <string name="trans_type">交易类型</string>
+    <string name="trans_card_no">交易卡号</string>
+    <string name="trans_amount">交易金额</string>
+    <string name="trans_amount_default">￥</string>
+    <string name="trans_oridate">原交易日期</string>
+    <string name="detail_auth_code">授权码</string>
+    <string name="auth_code">授权码:</string>
+    <string name="detail_trans_no">流水号</string>
+    <string name="trans_no">流水号:</string>
+    <string name="detail_trans_ref_no">参考号</string>
+    <string name="trans_ref_no">参考号:</string>
+    <string name="trans_date">交易时间</string>
+    <string name="trans_time">日期:</string>
+    <string name="trans_state">交易状态</string>
+    <string name="no_trans_record">无交易</string>
+    <string name="orig_trans_no_exist">原始交易不存在</string>
+
+    <!-- 交易状态 -->
+    <string name="normal">正常</string>
+    <string name="voided">已撤销</string>
+    <string name="adjust">已调整</string>
+    <string name="upload">已上送</string>
+    <string name="un_upload">未上送</string>
+
+    <!-- 撤销 -->
+    <string name="trans_void">撤销</string>
+    <string name="bank_void">银行卡撤销</string>
+    <string name="scan_code_void">扫码撤销</string>
+    <string name="prompt_void_last">可直接点击确定撤销上一笔交易</string>
+
+    <!-- 退货 -->
+    <string name="trans_refund">退货</string>
+    <string name="bank_refund">银行卡退货</string>
+    <string name="scan_code_refund">扫码退货</string>
+
+    <!-- 结算 -->
+    <string name="trans_settle">结算</string>
+    <string name="trans_settle_total">结算总计单</string>
+    <string name="merchant_name">商户名称</string>
+    <string name="merchant_id">商户编号</string>
+    <string name="terminal_id">终端号</string>
+    <string name="batch_id">批次号</string>
+    <string name="type">类型/TYPE</string>
+    <string name="sum">笔数/SUM</string>
+
+    <string name="inner_debit">借记/DEBIT(内卡)</string>
+    <string name="inner_credit">贷记/CREDIT(内卡)</string>
+    <string name="outer_debit">借记/DEBIT(外卡)</string>
+    <string name="outer_credit">贷记/CREDIT(外卡)</string>
+    <string name="total">总计/TOTAL</string>
+    <string name="print_settle_detail_or_not">是否打印明细?</string>
+    <string name="print_fail_detail_or_not">是否打印失败明细?</string>
+
+    <!-- 操作员签到 -->
+    <string name="oper_login">登录</string>
+    <string name="oper_logon">操作员签到</string>
+    <string name="oper_name">员工号</string>
+    <string name="oper_pwd">密码</string>
+    <string name="oper_is_not_exist">该操作员不存在</string>
+    <string name="oper_pwd_is_err">操作员密码错误</string>
+
+    <!-- 操作员管理 -->
+    <string name="oper_manage">操作员管理</string>
+    <string name="query_oper">查询操作员</string>
+    <string name="add_oper">添加操作员</string>
+    <string name="delete_oper">删除操作员</string>
+    <string name="modify_oper_pwd">修改密码</string>
+    <string name="modify_manger_pwd">主管改密</string>
+    <string name="manager_oper_id">操作员工号</string>
+    <string name="manager_oper_name">操作员名称</string>
+    <string name="manager_oper_id1">操作员工号(2位数字,如01)</string>
+    <string name="manager_oper_name1">操作员姓名(非必填项)</string>
+    <string name="manager_oper_psw">密码(四位数字)</string>
+    <string name="manager_oper_id2">工号</string>
+    <string name="manager_oper_name2">姓名</string>
+    <string name="manager_oper_psw1">密码</string>
+    <string name="oper_exist">此操作员已存在</string>
+    <string name="add_oper_not_allow">此操作员不允许添加</string>
+    <string name="add_success_end">添加操作员成功！</string>
+    <string name="add_success_continue">是否继续添加？</string>
+    <string name="add_failure_end">添加操作员失败！</string>
+    <string name="delete_succ">删除成功！</string>
+    <string name="delete_fail">删除失败！</string>
+    <string name="please_choose_delete_oper">请选择要删除的操作员</string>
+    <string name="please_input_new_pwd">请输入新密码</string>
+    <string name="psw_is_not_equal">密码不一致，请重输</string>
+    <string name="please_reinput_new_pwd">请再次输入新密码</string>
+    <string name="please_enter_four_num">请输入4位数字</string>
+    <string name="passwd_revise_succ">密码修改成功</string>
+    <string name="please_enter_six_num">请输入6位数字</string>
+
+    <!-- 签退 -->
+    <string name="trans_logout">签退</string>
+
+    <!-- 签名 -->
+    <string name="signature">电子签名</string>
+    <string name="clear_sign">清除签名</string>
+    <string name="finish_sign">确认签名</string>
+    <string name="trans_amount_info">交易金额:￥ </string>
+    <string name="pls_re_signature">签名数据过长,请重签</string>
+    <string name="sign_on_extend_pad">请在外置签名板上签名</string>
+
+    <!-- 打印 -->
+    <string name="trans_reprint">重打印</string>
+    <string name="print_trans_last">打印最后一笔</string>
+    <string name="print_trans_detail">打印交易明细</string>
+    <string name="print_trans_total">打印交易汇总</string>
+    <string name="print_last_total">打印上批总计</string>
+    <string name="trans_detail_list">交易明细单</string>
+    <string name="settle_detail_list">结算明细单</string>
+    <string name="trans_total_list">交易总计单</string>
+    <string name="trans_last_total_list">上批交易总计单</string>
+    <string name="offline_trans_send_failed">脱机交易上送失败明细单</string>
+    <string name="transfer_in_card_num">转入卡卡号：</string>
+
+    <!-- 扫码支付 -->
+    <string name="scan_pay_code">支付码号:</string>
+    <string name="scan_pay_codes">支付码号</string>
+    <string name="pay_voucher_num">付款凭证号</string>
+    <string name="orig_pay_voucher_num">原付款凭证号</string>
+
+    <!-- 银行卡支付 -->
+    <string name="prompt_external_ped">请使用外置密码键盘</string>
+
+    <!-- 闪付、云闪付 -->
+    <string name="amount_default">0.00</string>
+    <string name="prompt_trans_amount">交易金额（元）</string>
+
+    <!-- 管理 -->
+    <string name="manage">管理</string>
+
+    <!-- 其他 -->
+    <string name="app_others">其他</string>
+
+    <!-- 闪付凭密 -->
+    <string name="quick_pass_by_pin">闪付凭密</string>
+    <string name="quick_pass_sale_force_pin">消费凭密</string>
+    <string name="quick_pass_auth_force_pin">预授权凭密</string>
+
+    <!-- InputPwdDialog相关提示信息 -->
+    <string name="prompt_director_pwd">请输入主管密码</string>
+    <string name="prompt_sys_pwd">请输入系统管理员密码</string>
+    <string name="prompt_bankcard_pwd">请输入银行卡密码</string>
+    <string name="prompt_no_password">无密码则直接按确认键</string>
+    <string name="prompt_offline_pwd">请输入脱机密码</string>
+
+    <!-- SearchCardActivity 刷卡、插卡、挥卡、手刷 -->
+    <string name="prompt_insert_swipe_put_card">请刷卡/插卡/挥卡</string>
+    <string name="prompt_swipe_failed_please_retry">读卡失败,请重试</string>
+    <string name="prompt_ic_card_input">此卡为芯片卡,请插卡交易!</string>
+    <string name="prompt_card_date">卡有效期</string>
+    <string name="prompt_card_num">卡号</string>
+    <string name="prompt_card_date_err">日期格式错误,请核对!</string>
+    <string name="prompt_card_num_err">卡号输入错误,请核对!</string>
+    <string name="prompt_card_num_manual">请输入卡号</string>
+    <string name="prompt_date_default">MM/YY</string>
+    <string name="prompt_default_serchcard_prompt">请使用您的银行卡</string>
+
+    <!-- InfosInputActivity 相关信息 -->
+    <string name="prompt_input_transno">请输入原交易流水号</string>
+    <string name="prompt_input_certificate">请手输或点击扫描框扫描凭证码</string>
+    <string name="prompt_input_orig_refer">原交易参考号</string>
+    <string name="prompt_input_amount">金额(元)</string>
+    <string name="prompt_input_refund_amount">退货金额(元):</string>
+    <string name="prompt_input_scancode_refund_amount">扫码退货金额(元):</string>
+    <string name="prompt_input_tip_amount">小费金额(元):</string>
+    <string name="prompt_input_adjust_amount">调整金额(元):</string>
+    <string name="prompt_input_auth_code">授权码</string>
+    <string name="prompt_input_date">原交易日期</string>
+    <string name="please_input_again">请重新输入</string>
+    <string name="date_default">MM/DD</string>
+
+    <!-- CustomAlertDialog提示信息 -->
+    <string name="start_scan">开始扫码</string>
+    <string name="dialog_ok">确定</string>
+    <string name="dialog_cancel_save">取消保存</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="process_please_wait">正在处理，请稍候</string>
+    <string name="trans_succ">交易成功</string>
+    <string name="trans_succ_liff">成功</string>
+    <string name="err_timeout">超时</string>
+    <string name="err_connect">连接失败</string>
+    <string name="err_send">发送失败</string>
+    <string name="err_recv">接收失败</string>
+    <string name="err_pack">打包失败</string>
+    <string name="err_unpack">解包失败</string>
+    <string name="err_bag">非法包</string>
+    <string name="err_mac">解包MAC错,请重新签到</string>
+    <string name="err_proc_code">解包处理码不一致</string>
+    <string name="err_msg">解包消息类型码不一致</string>
+    <string name="err_trans_amt">解包金额不一致</string>
+    <string name="err_trace_no">解包流水号不一致</string>
+    <string name="err_term_id">解包终端号不一致</string>
+    <string name="err_merch_id">解包商户号不一致</string>
+    <string name="err_no_trans">无交易</string>
+    <string name="err_no_valid_trans">无有效交易</string>
+    <string name="err_no_orig_trans">无原始交易</string>
+    <string name="err_twk_length">工作密钥长度错误</string>
+    <string name="err_has_void">交易已撤销</string>
+    <string name="err_void_unsupport">此交易不可撤销</string>
+    <string name="err_comm_channel">打开通讯口错误</string>
+    <string name="err_host_reject">平台拒绝</string>
+    <string name="err_not_logon">终端未签到,\n请先做POS签到</string>
+    <string name="err_need_settle_now">交易笔数超限,\n请立刻结算</string>
+    <string name="err_need_settle_later">交易笔数超限,\n请稍后结算</string>
+    <string name="err_no_free_space">存储空间不足,\n请先结算</string>
+    <string name="err_not_support_trans">不支持该交易</string>
+    <string name="err_batch_up_break_need_continue">前次批上送未完成\n请点击结算继续上送</string>
+    <string name="err_undefine">未定义错误</string>
+    <string name="err_undefine_info">未定义</string>
+    <string name="err_original_cardno">与原交易卡号不符</string>
+    <string name="err_manager_password">主管密码错误</string>
+    <string name="err_password">密码错误</string>
+    <string name="err_param">参数错误</string>
+    <string name="err_amount">金额超限</string>
+    <string name="err_card_denied">平台批准,卡片拒绝\n请联系发卡行</string>
+    <string name="err_card_unsupport_demotion">终端不支持降级</string>
+    <string name="err_card_bin">卡BIN格式有误</string>
+    <string name="trans_record_no_exist">无交易记录</string>
+    <string name="print_wait">打印中, 请稍等...</string>
+    <string name="print_paper">打印机缺纸, 请装纸...</string>
+    <string name="print_hot">打印机过热, 请稍等...</string>
+    <string name="print_voltage">打印机电压过低</string>
+    <string name="wait_initialize_net">网络初始化...</string>
+    <string name="wait_process">处理中, 请稍等...</string>
+    <string name="wait_connect">连接中, 请稍等...</string>
+    <string name="wait_dail">正在拨号...</string>
+    <string name="wait_connect_other">备用主机连接中, 请稍等...</string>
+    <string name="wait_send">发送中, 请稍等...</string>
+    <string name="wait_recv">接收中, 请稍等...</string>
+    <string name="err_password_print">密码错, 请重输</string>
+    <string name="reverse_prompt">冲正</string>
+    <string name="reverse_err">冲正失败, 请联系发卡行</string>
+    <string name="emv_err_code">错误码:</string>
+    <string name="emv_err_info">\n</string>
+    <string name="set_prompt">提示</string>
+    <string name="set_settle">有交易流水，请先结算</string>
+    <string name="set_print_password">请输入安全密码</string>
+    <string name="set_err_password">密码错误!</string>
+    <string name="err_adjust_unsupport">此交易不可调整</string>
+    <string name="prompt_ex_signature">请使用外置签名板</string>
+    <string name="prompt_ex_scan_code_device">请使用外置扫码</string>
+
+    <!-- 电子签名上送 -->
+    <string name="sign_upload_failed">电子签名上送失败</string>
+    <string name="sign_recv_failed">接收失败，电子签名上送失败</string>
+
+    <!-- 软件版本号 -->
+    <string name="version">查看版本</string>
+    <string name="app_version">软件版本号</string>
+
+    <!-- MainActivity 提示信息 -->
+
+
+    <!-- EMV 相关信息 -->
+    <string name="emv_cardno_confirm">卡号确认</string>
+    <string name="emv_err_auth_trans_can_not_use_pure_card">授权交易不可使用电子现金</string>
+    <string name="emv_err_pure_card_can_not_online">纯电子现金无法联机</string>
+    <string name="emv_application_choose">应用选择</string>
+    <string name="emv_application_choose_again">应用选择[重新选择]</string>
+    <string name="emv_input_last">最后一次</string>
+    <string name="emv_arrival_card">入境证</string>
+    <string name="emv_identity_card">身份证</string>
+    <string name="emv_officers_card">军官证</string>
+    <string name="emv_other_card">其他证件</string>
+    <string name="emv_passport">护照</string>
+    <string name="emv_interim_identity_card">临时身份证</string>
+    <string name="emv_card_in_black_list">该卡被列入黑名单</string>
+    <!-- Printer 相关信息 -->
+    <string name="print_inside_card_check">内卡对账平</string>
+    <string name="print_inside_card_check_uneven">内卡对账不平</string>
+    <string name="print_inside_card_check_err">内卡对账出错</string>
+    <string name="print_outside_card_check">外卡对账平</string>
+    <string name="print_outside_card_check_uneven">外卡对账不平</string>
+    <string name="print_outside_card_check_err">外卡对账出错</string>
+
+    <!-- Receipt 相关信息 -->
+    <string name="receipt_merchant_name">商户名称: </string>
+    <string name="receipt_merchant_code">商户编号: </string>
+    <string name="receipt_terminal_code">终端编号</string>
+    <string name="receipt_terminal_code_space">终端编号: </string>
+    <string name="receipt_oper_id">操作员号</string>
+    <string name="receipt_oper_id_space">操作员号: </string>
+    <string name="receipt_batch_num">批次号</string>
+    <string name="receipt_batch_num_colon">批次号:</string>
+    <string name="receipt_batch_num_space">批次号  : </string>
+    <string name="receipt_date">日期/时间:</string>
+    <string name="receipt_failed_trans_details">未成功上送交易明细</string>
+    <string name="receipt_rejuct_trans_details">上送后被平台拒绝交易明细</string>
+    <string name="receipt_type">类型</string>
+    <string name="receipt_count">笔数</string>
+    <string name="receipt_amount">金额</string>
+    <string name="receipt_inside_card_borrow">内卡借记</string>
+    <string name="receipt_inside_card_loan">内卡贷记</string>
+    <string name="receipt_outside_card_borrow">外卡借记</string>
+    <string name="receipt_outside_card_loan">外卡贷记</string>
+    <string name="receipt_card_no">卡号: </string>
+    <string name="receipt_trans_type">交易类型:</string>
+    <string name="receipt_trans_no">流水号:</string>
+    <string name="receipt_card_date">有效期:</string>
+    <string name="receipt_card_issue">发卡行:</string>
+    <string name="receipt_auth_code">授权码:</string>
+    <string name="receipt_card_acquire">收单行:</string>
+    <string name="receipt_ref_no">参考号:</string>
+    <string name="receipt_card_organization">卡组织代码:</string>
+    <string name="receipt_comment">备注:</string>
+    <string name="receipt_orig_trans_no">原流水号:</string>
+    <string name="receipt_orig_date">原交易日期:</string>
+    <string name="receipt_orig_auth_code">原授权码:</string>
+    <string name="receipt_orig_ref_no">原参考号:</string>
+    <string name="receipt_orig_term_id">原交易终端号:</string>
+    <string name="receipt_orig_batch_no">原交易批次号:</string>
+    <string name="receipt_print_agian">重打印凭证</string>
+    <string name="receipt_had_void">已撤销</string>
+    <string name="receipt_ec_balance">电子现金余额:</string>
+    <string name="receipt_amount_prompt_start">交易金额未超</string>
+    <string name="receipt_amount_prompt_end">元,免密免签</string>
+    <string name="receipt_amount_prompt_end_sign">元,无需签名</string>
+    <string name="receipt_amount_prompt_end_password">元,无需输密</string>
+    <string name="receipt_no_sign">电子现金免签名</string>
+    <string name="receipt_sign">-----------持卡人签名-----------</string>
+    <string name="code_receipt_sign">扫码交易免签名</string>
+    <string name="receipt_verify">本人确认以上交易同意记入本卡账户</string>
+    <string name="receipt_stub_acquire">收单机构存根联"</string>
+    <string name="receipt_stub_merchant">商户存根联</string>
+    <string name="receipt_stub_user">持卡人存根联</string>
+    <string name="receipt_amount_sale">消费金额</string>
+    <string name="receipt_amount_tip">小费</string>
+    <string name="receipt_amount_total">总计</string>
+    <string name="receipt_cash_refund">电子现金退货</string>
+    <string name="receipt_en_merchant_name">商户名称(MERCHANT NAME): </string>
+    <string name="receipt_en_merchant_code">商户编号(MERCHANT NO): </string>
+    <string name="receipt_en_terminal_code_space">终端编号(TERMINAL NO): </string>
+    <string name="receipt_en_oper_id_space">操作员号(OPERATOR): </string>
+    <string name="receipt_en_date">日期/时间(DATE/TIME):</string>
+    <string name="receipt_en_amount">金额(AMOUNT):</string>
+    <string name="receipt_en_amount_sale">消费金额(AMOUNT):</string>
+    <string name="receipt_en_amount_tip">小费(TIPS):</string>
+    <string name="receipt_en_amount_total">总计(TOTAL):</string>
+    <string name="receipt_en_trans_type">交易类型(TXN TYPE):</string>
+    <string name="receipt_en_card_no">卡号(CARD NO): </string>
+    <string name="receipt_en_batch_num_colon">批次号(BATCH NO):</string>
+    <string name="receipt_en_trans_no">流水号(TRANS NO):</string>
+    <string name="receipt_en_auth_code">授权码(AUTH NO):</string>
+    <string name="receipt_en_card_date">有效期(EXP DATE):</string>
+    <string name="receipt_en_card_issue">发卡行(ISS):</string>
+    <string name="receipt_en_card_acquire">收单行(ACQ):</string>
+    <string name="receipt_en_card_organization">卡组织代码(WILDCARD ORG):</string>
+    <string name="receipt_en_ref_no">参考号(REF NO):</string>
+    <string name="receipt_en_comment">备注(REFERENCE):</string>
+    <string name="receipt_en_sign">CARD HOLDER SIGNATURE</string>
+    <string name="receipt_en_verify">本人确认以上交易同意记入本卡账户\nI ACKNOWLEDGE SATISFACTORY RECEIPT OF RELATIVE GOODS/SERVICE</string>
+    <string name="scan_en_pay_code">支付码号(PAY CODE NUMBER):</string>
+
+    <!-- Settings 相关信息 -->
+    <string name="set_cancle_save">取消保存</string>
+    <string name="set_recv">接收中...</string>
+    <string name="set_key_success">导密钥成功</string>
+    <string name="set_key_fail">导密钥失败</string>
+
+    <!-- 银行 -->
+    <string name="icbc">工商银行</string>
+    <string name="icbc_cup">工行 银联</string>
+    <string name="abc">农业银行</string>
+    <string name="abc_cup">农行 银联</string>
+    <string name="boc">中国银行</string>
+    <string name="boc_cup">中行 银联</string>
+    <string name="cbc">建设银行</string>
+    <string name="cbc_cup">建行 银联</string>
+    <string name="psbc">邮储银行</string>
+    <string name="psbc_cup">邮储 银联</string>
+    <string name="bcm">交通银行</string>
+    <string name="bcm_cup">交行 银联</string>
+    <string name="ccb">中信银行</string>
+    <string name="ccb_cup">中信 银联</string>
+    <string name="ceb">光大银行</string>
+    <string name="ceb_cup">光大 银联</string>
+    <string name="hxb">华夏银行</string>
+    <string name="hxb_cup">华夏 银联</string>
+    <string name="cmbc">民生银行</string>
+    <string name="cmbc_cup">民生 银联</string>
+    <string name="gdb">广发银行</string>
+    <string name="gdb_cup">广发 银联</string>
+    <string name="sdb">深发银行</string>
+    <string name="sdb_cup">深发 银联</string>
+    <string name="cmb">招商银行</string>
+    <string name="cmb_cup">招行 银联</string>
+    <string name="cib">兴业银行</string>
+    <string name="cib_cup">兴业 银联</string>
+    <string name="spdb">浦发银行</string>
+    <string name="spdb_cup">浦发 银联</string>
+    <string name="ums">银联商务</string>
+    <string name="ums_cup">银联 商务</string>
+    <string name="commercial_bank">商用银行</string>
+
+    <!-- 退出应用 -->
+    <string name="please_install_neptune">请安装Neptune</string>
+    <string name="exit_app">是否退出当前应用?</string>
+    <string name="param_need_upate_please_settle">参数需要更新, 请结算!</string>
+    <string name="app_need_update_please_settle">应用需要更新或卸载，请先结算！</string>
+    <string name="app_crash_exit">程序出现异常，即将退出！</string>
+    <string name="manager_oper_name1_hint">非必填</string>
+    <string name="oper_pwd_hint">请输入密码(四位数字)</string>
+    <string name="oper_id">工号</string>
+    <string name="trans_details">交易明细</string>
+
+    <!-- 终端锁定 -->
+    <string name="lockTerminal">终端锁定</string>
+    <string name="prompt_lock_terminal">是否锁定终端？</string>
+    <string name="prompt_terminal_pwd">请输入锁屏密码</string>
+    <string name="prompt_err_card">非法卡！</string>
+    <string name="err_scan_code">无效的二维码！</string>
+    <string name="err_no_actived">尚未激活！</string>
+    <string name="err_save_fail">交易保存失败，请重试！</string>
+    <string name="err_exped_timeout">放置底座超时</string>
+    <!-- A930适配  -->
+    <string name="prompt_card_num_with_empty">卡&#160;&#160;&#160;&#160;&#160;&#160;号</string>
+    <string name="manager_oper_name3">姓&#160;&#160;&#160;&#160;&#160;&#160;名</string>
+    <string name="manager_oper_id3">工&#160;&#160;&#160;&#160;&#160;&#160;号</string>
+    <string name="manager_oper_psw3">密&#160;&#160;&#160;&#160;&#160;&#160;码</string>
+    <string name="oper_logon_user_hint">请输入工号</string>
+    <string name="oper_logon_pwd_hint">请输入密码</string>
+    <string name="oper_logon_pwd">密&#160;&#160;&#160;&#8201;&#8201;码</string>
+    <string name="oper_chg_pwd_new">新密码</string>
+    <string name="oper_chg_user">工&#160;&#8201;&#8201;&#8201;&#8201;号</string>
+    <string name="auth_code_with_empty">授&#160;&#160;&#160;&#8201;权&#160;&#160;&#160;&#8201;码</string>
+    <string name="manager_chgpwd_new">输入新密码</string>
+    <string name="manager_chgpwd_confirm">确认新密码</string>
+
+    <drawable name="bkcolor">#000000</drawable>
+    <string name="scan_pay_code2">支付码</string>
+    <string name="is_prompt_removecard">是否提示移卡</string>
+
+
+    <string name="error_cancel_trans">Transaction Cancel</string>
+    <string name="error_pinpad">Pinpad Error</string>
+
+</resources>
+
+
+
