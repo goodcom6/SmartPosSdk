@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/test_loadAllKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="load All key"
+        android:textSize="12dp"
+        android:onClick="loadAllKeyWithoutTlk"/>
+
+    <Button
+        android:textSize="12dp"
+        android:id="@+id/test_loadAllKeyWithKcv"
+        android:layout_toRightOf="@id/test_loadAllKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="load All Key With Tlk"
+        android:onClick="loadAllKeyWithTlk"/>
+
+    <Button
+        android:textSize="12dp"
+        android:id="@+id/test_calcKcvbyte"
+        android:layout_below="@id/test_loadAllKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="calv Kcv"
+        android:onClick="calcKcv"/>
+
+    <Button
+        android:textSize="12dp"
+        android:id="@+id/test_encryptanddecrypt"
+        android:layout_below="@id/test_loadAllKey"
+        android:layout_toRightOf="@id/test_calcKcvbyte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="encrypt and decrypt"
+        android:onClick="encryptAndDecrypt"/>
+
+    <Button
+        android:textSize="12dp"
+        android:id="@+id/test_mac"
+        android:layout_below="@id/test_loadAllKey"
+        android:layout_toRightOf="@id/test_encryptanddecrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="mac"
+        android:onClick="mac"/>
+
+
+
+    <Button
+        android:textSize="12dp"
+        android:id="@+id/testencryptMagTrack"
+        android:layout_below="@id/test_calcKcvbyte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="encrypt Mag Track"
+        android:onClick="encryptMagTrack"/>
+
+    <Button
+        android:textSize="12dp"
+        android:id="@+id/inputonlinepin"
+        android:layout_below="@id/test_calcKcvbyte"
+        android:layout_toRightOf="@id/testencryptMagTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Input Pin"
+        android:onClick="inputonlinepin"/>
+
+    <Button
+        android:textSize="12dp"
+        android:id="@+id/clearDisplay"
+        android:layout_below="@id/testencryptMagTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="clearDisplay"
+        android:onClick="clearDisplay"/>
+
+
+
+    <TextView
+        android:textSize="12dp"
+        android:scrollbars="vertical"
+        android:layout_below="@id/clearDisplay"
+        android:id="@+id/test_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:dividerPadding="1dp"
+    android:divider="@drawable/divider_pinpad_bg"
+    android:showDividers="middle"
+    android:weightSum="4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:dividerPadding="1dp"
+        android:divider="@drawable/divider_pinpad_bg"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/num1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/pinpad_key_bg"
+            android:gravity="center"
+            android:textColor="@drawable/keyboard_text_color_selector"
+            android:textSize="@dimen/font_size_xlarge" />
+
+        <!-- android:background="@drawable/keyboard_btn_selector" -->
+
+        <TextView
+            android:id="@+id/num2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/pinpad_key_bg"
+            android:gravity="center"
+            android:textColor="@drawable/keyboard_text_color_selector"
+            android:textSize="@dimen/font_size_xlarge" />
+
+        <TextView
+            android:id="@+id/num3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/pinpad_key_bg"
+            android:gravity="center"
+            android:textColor="@drawable/keyboard_text_color_selector"
+            android:textSize="@dimen/font_size_xlarge" />
+
+        <LinearLayout
+            android:id="@+id/num_close"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/pinpad_close_bg"
+            android:gravity="center"
+            android:textSize="@dimen/font_size_xlarge" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_pinpad_close" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:divider="@drawable/divider_pinpad_bg"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/num4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/pinpad_key_bg"
+            android:gravity="center"
+            android:textColor="@drawable/keyboard_text_color_selector"
+            android:textSize="@dimen/font_size_xlarge" />
+
+        <TextView
+            android:id="@+id/num5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/pinpad_key_bg"
+            android:gravity="center"
+            android:textColor="@drawable/keyboard_text_color_selector"
+            android:textSize="@dimen/font_size_xlarge" />
+
+        <TextView
+            android:id="@+id/num6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/pinpad_key_bg"
+            android:gravity="center"
+            android:textColor="@drawable/keyboard_text_color_selector"
+            android:textSize="@dimen/font_size_xlarge" />
+
+        <LinearLayout
+            android:id="@+id/num_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/pinpad_rollback_bg"
+            android:gravity="center"
+            android:textSize="@dimen/font_size_xlarge" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_pinpad_back" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 4,5,6,0} -->
+    <!-- 7,8,9,00{ -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:divider="@drawable/divider_pinpad_bg"
+        android:showDividers="middle">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:divider="@drawable/divider_pinpad_bg"
+            android:showDividers="middle">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:divider="@drawable/divider_pinpad_bg"
+                android:showDividers="middle">
+
+                <TextView
+                    android:id="@+id/num7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/pinpad_key_bg"
+                    android:gravity="center"
+                    android:textColor="@drawable/keyboard_text_color_selector"
+                    android:textSize="@dimen/font_size_xlarge" />
+
+                <TextView
+                    android:id="@+id/num8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/pinpad_key_bg"
+                    android:gravity="center"
+                    android:textColor="@drawable/keyboard_text_color_selector"
+                    android:textSize="@dimen/font_size_xlarge" />
+
+                <TextView
+                    android:id="@+id/num9"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/pinpad_key_bg"
+                    android:gravity="center"
+                    android:textColor="@drawable/keyboard_text_color_selector"
+                    android:textSize="@dimen/font_size_xlarge" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:gravity="center"
+                android:divider="@drawable/divider_pinpad_bg"
+                android:showDividers="middle">
+                <TextView
+                    android:id="@+id/num0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/pinpad_key_bg"
+                    android:gravity="center"
+                    android:textColor="@drawable/keyboard_text_color_selector"
+                    android:textSize="@dimen/font_size_xlarge" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/num_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/pinpad_confirm_bg">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_pinpad_confirm" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

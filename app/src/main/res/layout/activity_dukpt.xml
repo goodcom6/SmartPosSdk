@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/test_loadDUKPTBDK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="loadDUKPTBDK"
+        android:text="load DUKPT BDK"
+        android:textSize="12dp" />
+
+    <Button
+        android:id="@+id/test_loadDUKPTIPEK"
+        android:layout_toRightOf="@id/test_loadDUKPTBDK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="load DUKPT IPEK"
+        android:textSize="12dp"
+        android:onClick="loadDUKPTIPEK"/>
+
+    <Button
+        android:id="@+id/test_calDUKPT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/test_loadDUKPTIPEK"
+        android:onClick="CalDukpt"
+        android:text="Cal DUKPY"
+        android:textSize="12dp" />
+
+    <Button
+        android:id="@+id/test_desDUKPT"
+        android:layout_below="@id/test_loadDUKPTBDK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Des DUKPY"
+        android:textSize="12dp"
+        android:onClick="DesDukpt"/>
+
+    <Button
+        android:id="@+id/test_inputpin"
+        android:layout_below="@id/test_loadDUKPTBDK"
+        android:layout_toRightOf="@id/test_desDUKPT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Input Dukpt Pin"
+        android:textSize="12dp"
+        android:onClick="InputDukptPin"/>
+
+
+    <Button
+        android:id="@+id/clearDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/test_desDUKPT"
+        android:layout_marginTop="2dp"
+        android:onClick="clearDisplay"
+        android:text="clearDisplay"
+        android:textSize="12dp" />
+
+
+
+    <TextView
+        android:textSize="12dp"
+        android:scrollbars="vertical"
+        android:layout_below="@id/clearDisplay"
+        android:id="@+id/test_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

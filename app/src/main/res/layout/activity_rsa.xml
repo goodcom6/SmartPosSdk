@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_index"
+        android:text="Index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_below="@id/tv_index"
+        android:id="@+id/et_index"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1"/>
+
+    <Button
+        android:layout_below="@id/et_index"
+        android:id="@+id/GenerateRsaKeyPair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="GenerateRsaKeyPair"
+        android:textSize="12dp"
+        android:textAllCaps="false"
+        android:onClick="GenerateRsaKeyPair"/>
+
+    <Button
+        android:textSize="12dp"
+        android:id="@+id/removeRSAKey"
+        android:layout_toRightOf="@id/GenerateRsaKeyPair"
+        android:layout_below="@id/et_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textAllCaps="false"
+        android:text="removeRSAKey"
+        android:onClick="removeRSAKey"/>
+
+    <Button
+        android:textSize="12dp"
+        android:layout_toRightOf="@id/removeRSAKey"
+        android:layout_below="@id/et_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textAllCaps="false"
+        android:text="storeRSAPubKey"
+        android:onClick="storeRSAPubKey"/>
+
+    <Button
+        android:textSize="12dp"
+        android:id="@+id/getRsaPublicKey"
+        android:layout_below="@id/GenerateRsaKeyPair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textAllCaps="false"
+        android:text="getRsaPublicKey"
+        android:onClick="getRsaPublicKey"/>
+
+    <Button
+        android:textSize="12dp"
+        android:id="@+id/setRsaAlgPaddingMode"
+        android:layout_below="@id/GenerateRsaKeyPair"
+        android:layout_toRightOf="@id/getRsaPublicKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textAllCaps="false"
+        android:text="setRsaAlgPaddingMode"
+        android:onClick="setRsaAlgPaddingMode"/>
+
+
+
+    <Button
+        android:textSize="12dp"
+        android:id="@+id/encrypByRsaPub"
+        android:layout_below="@id/getRsaPublicKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textAllCaps="false"
+        android:text="encrypByRsaPub"
+        android:onClick="encrypByRsaPub"/>
+
+    <Button
+        android:textSize="12dp"
+        android:id="@+id/encrypByRsaPri"
+        android:layout_below="@id/getRsaPublicKey"
+        android:layout_toRightOf="@id/encrypByRsaPub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textAllCaps="false"
+        android:text="encrypByRsaPri"
+        android:onClick="encrypByRsaPri"/>
+
+    <Button
+        android:textSize="12dp"
+        android:id="@+id/decryptByRsaPub"
+        android:layout_below="@id/encrypByRsaPub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textAllCaps="false"
+        android:text="decryptByRsaPub"
+        android:onClick="decryptByRsaPub"/>
+
+    <Button
+        android:textSize="12dp"
+        android:id="@+id/decryptByRsaPri"
+        android:layout_below="@id/encrypByRsaPub"
+        android:layout_toRightOf="@id/decryptByRsaPub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textAllCaps="false"
+        android:text="decryptByRsaPri"
+        android:onClick="decryptByRsaPri"/>
+
+    <Button
+        android:textSize="12dp"
+        android:id="@+id/signBySha256WithRsa"
+        android:layout_below="@id/decryptByRsaPub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textAllCaps="false"
+        android:text="signBySha256WithRsa"
+        android:onClick="signBySha256WithRsa"/>
+
+    <Button
+        android:textSize="12dp"
+        android:id="@+id/verifySignBySha256WithRsa"
+        android:layout_below="@id/decryptByRsaPub"
+        android:layout_toRightOf="@id/signBySha256WithRsa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textAllCaps="false"
+        android:text="verifySignBySha256WithRsa"
+        android:onClick="verifySignBySha256WithRsa"/>
+
+
+    <TextView
+        android:textSize="12dp"
+        android:scrollbars="vertical"
+        android:layout_below="@id/verifySignBySha256WithRsa"
+        android:id="@+id/test_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
