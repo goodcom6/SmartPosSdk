@@ -5,8 +5,8 @@ import android.os.RemoteException;
 import android.util.Log;
 import android.view.View;
 
-import com.goodcom.administrator.generalprinter.constant.PosConstants;
-import com.goodcom.administrator.generalprinter.listener.BankCardReaderListener;
+import com.goodcom.smartpossdk.PosConstants;
+import com.goodcom.smartpossdk.listener.BankCardReaderListener;
 import com.goodcom.pos.BaseAppCompatActivity;
 import com.goodcom.pos.MainApp;
 import com.goodcom.pos.R;

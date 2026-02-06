@@ -2,10 +2,10 @@ package com.goodcom.pos.utils;
 
 import com.goodcom.smartpossdk.utils.AppUtil;
 import com.goodcom.smartpossdk.utils.BCDHelper;
-import com.goodcom.smartpossdk.utils.tlv.BerTag;
-import com.goodcom.smartpossdk.utils.tlv.BerTlv;
-import com.goodcom.smartpossdk.utils.tlv.BerTlvParser;
-import com.goodcom.smartpossdk.utils.tlv.BerTlvs;
+import com.goodcom.smartpossdk.utils.BerTag;
+import com.goodcom.smartpossdk.utils.BerTlv;
+import com.goodcom.smartpossdk.utils.BerTlvParser;
+import com.goodcom.smartpossdk.utils.BerTlvs;
 import com.goodcom.smartpossdk.utils.LogUtil;
 
 public class TlvData {

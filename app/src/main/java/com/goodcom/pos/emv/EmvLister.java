@@ -7,9 +7,9 @@ import android.os.RemoteException;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.goodcom.administrator.generalprinter.constant.PosConstants;
-import com.goodcom.administrator.generalprinter.entity.PinpadResult;
-import com.goodcom.administrator.generalprinter.listener.PosEmvCoreListener;
+import com.goodcom.smartpossdk.PosConstants;
+import com.goodcom.smartpossdk.entity.PinpadResult;
+import com.goodcom.smartpossdk.listener.PosEmvCoreListener;
 import com.goodcom.pos.MainApp;
 import com.goodcom.pos.R;
 import com.goodcom.pos.dialog.EnterDialog;
@@ -24,9 +24,6 @@ import com.goodcom.smartpossdk.utils.StringUtils;
 
 import java.util.List;
 
-/**
- * @author guan
- */
 public class EmvLister extends PosEmvCoreListener.Stub {
     private static final String TAG = "EmvNewLister";
 

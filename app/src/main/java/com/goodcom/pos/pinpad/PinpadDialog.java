@@ -13,8 +13,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import com.goodcom.administrator.generalprinter.constant.PosConstants;
-import com.goodcom.administrator.generalprinter.listener.PinpadListener;
+import com.goodcom.smartpossdk.PosConstants;
+import com.goodcom.smartpossdk.listener.PinpadListener;
 import com.goodcom.pos.MainApp;
 import com.goodcom.pos.R;
 import com.goodcom.pos.utils.DeviceTools;

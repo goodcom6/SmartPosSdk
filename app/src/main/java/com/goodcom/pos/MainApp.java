@@ -4,8 +4,8 @@ import android.app.Application;
 import android.os.RemoteException;
 import android.util.Log;
 
-import com.goodcom.administrator.generalprinter.constant.PosConstants;
-import com.goodcom.administrator.generalprinter.entity.PinpadResult;
+import com.goodcom.smartpossdk.PosConstants;
+import com.goodcom.smartpossdk.entity.PinpadResult;
 import com.goodcom.pos.emv.EmvConfig;
 import com.goodcom.pos.emv.TransData;
 import com.goodcom.smartpossdk.ConnectCallback;

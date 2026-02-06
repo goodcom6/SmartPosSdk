@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-import com.goodcom.administrator.generalprinter.entity.DukptInfo;
+import com.goodcom.smartpossdk.entity.DukptInfo;
 import com.goodcom.pos.MainApp;
 import com.goodcom.pos.R;
 import com.goodcom.smartpossdk.GcSmartPosUtils;

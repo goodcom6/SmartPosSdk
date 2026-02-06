@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-import com.goodcom.administrator.generalprinter.constant.PosConstants;
-import com.goodcom.administrator.generalprinter.entity.PinpadResult;
+import com.goodcom.smartpossdk.PosConstants;
+import com.goodcom.smartpossdk.entity.PinpadResult;
 import com.goodcom.pos.MainApp;
 import com.goodcom.pos.R;
 import com.goodcom.smartpossdk.GcSmartPosUtils;

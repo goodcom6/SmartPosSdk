@@ -4,18 +4,18 @@ import android.os.Bundle;
 import android.os.RemoteException;
 import android.util.Log;
 
-import com.goodcom.administrator.generalprinter.constant.PosConstants;
-import com.goodcom.administrator.generalprinter.entity.PosEmvAid;
-import com.goodcom.administrator.generalprinter.entity.PosEmvCapk;
-import com.goodcom.administrator.generalprinter.entity.PosEmvExceptionFile;
-import com.goodcom.administrator.generalprinter.entity.PosEmvRevocationIPK;
+import com.goodcom.smartpossdk.PosConstants;
+import com.goodcom.smartpossdk.entity.PosEmvAid;
+import com.goodcom.smartpossdk.entity.PosEmvCapk;
+import com.goodcom.smartpossdk.entity.PosEmvExceptionFile;
+import com.goodcom.smartpossdk.entity.PosEmvRevocationIPK;
 import com.goodcom.pos.MainApp;
-import com.goodcom.pos.utils.PosUtils;
+import com.goodcom.smartpossdk.utils.PosUtils;
 import com.goodcom.smartpossdk.GcSmartPosUtils;
-import com.goodcom.smartpossdk.utils.tlv.BerTag;
-import com.goodcom.smartpossdk.utils.tlv.BerTlv;
-import com.goodcom.smartpossdk.utils.tlv.BerTlvBuilder;
-import com.goodcom.smartpossdk.utils.tlv.HexUtil;
+import com.goodcom.smartpossdk.utils.BerTag;
+import com.goodcom.smartpossdk.utils.BerTlv;
+import com.goodcom.smartpossdk.utils.BerTlvBuilder;
+import com.goodcom.smartpossdk.utils.HexUtil;
 
 import java.util.ArrayList;
 import java.util.List;
