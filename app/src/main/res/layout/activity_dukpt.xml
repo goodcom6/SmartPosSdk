@@ -44,15 +44,26 @@
         android:onClick="DesDukpt"/>
 
     <Button
-        android:id="@+id/test_inputpin"
+        android:id="@+id/test_inputpinrandom"
         android:layout_below="@id/test_loadDUKPTBDK"
         android:layout_toRightOf="@id/test_desDUKPT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:text="Input Dukpt Pin"
+        android:text="Input Pin Random"
         android:textSize="12dp"
-        android:onClick="InputDukptPin"/>
+        android:onClick="InputDukptPinRandom"/>
+
+    <Button
+        android:id="@+id/test_inputpinfixed"
+        android:layout_below="@id/test_loadDUKPTBDK"
+        android:layout_toRightOf="@id/test_inputpinrandom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Input Pin Fixed"
+        android:textSize="12dp"
+        android:onClick="InputDukptPinFixed"/>
 
 
     <Button

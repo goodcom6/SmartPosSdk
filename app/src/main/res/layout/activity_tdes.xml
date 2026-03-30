@@ -69,19 +69,31 @@
 
     <Button
         android:textSize="12dp"
-        android:id="@+id/inputonlinepin"
+        android:id="@+id/inputonlinepinrandom"
         android:layout_below="@id/test_calcKcvbyte"
         android:layout_toRightOf="@id/testencryptMagTrack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:text="Input Pin"
-        android:onClick="inputonlinepin"/>
+        android:text="Input Pin Random"
+        android:onClick="inputonlinepinRandom"/>
+
+
+    <Button
+        android:textSize="12dp"
+        android:id="@+id/inputonlinepinfixed"
+        android:layout_below="@id/inputonlinepinrandom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Input Pin Fixed"
+        android:onClick="inputonlinepinFixed"/>
+
 
     <Button
         android:textSize="12dp"
         android:id="@+id/clearDisplay"
-        android:layout_below="@id/testencryptMagTrack"
+        android:layout_below="@id/inputonlinepinfixed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
