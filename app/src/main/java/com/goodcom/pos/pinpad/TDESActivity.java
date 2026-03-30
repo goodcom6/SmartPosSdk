@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
+import com.goodcom.pos.utils.DESUtil;
 import com.goodcom.smartpossdk.PosConstants;
 import com.goodcom.smartpossdk.entity.PinpadResult;
 import com.goodcom.pos.MainApp;
@@ -26,6 +27,7 @@ public class TDESActivity extends Activity {
     private String tlk_kcv = "60C15261";
     private String tmk = "CF896E42A67B5E220EC6D2C9F394CA8FCF896E42A67B5E22";
     private String tmk_kcv = "60C15261";
+    //1234567890ABCDEF0987654321ABCDEF1234567890ABCDEF
     private String tak = "ABF803B6E79765C8024152A46359B433ABF803B6E79765C8";
     private String tak_kcv = "C68F798E";
     private String tpk = "F18E65C529BD733CABF803B6E79765C8F18E65C529BD733C";
@@ -116,17 +118,17 @@ public class TDESActivity extends Activity {
         try {
             display_clear();
 
-            int ret = GcSmartPosUtils.getInstance().loadProtectKey(MainApp.getInstance().getApplicationContext(),area, tlk);
+            int ret = GcSmartPosUtils.getInstance().loadProtectKey(MainApp.getInstance().getApplicationContext(), area, tlk);
             display_show("loadProtectKey ret:" + ret);
-            ret = GcSmartPosUtils.getInstance().loadMainKeyByEnc(MainApp.getInstance().getApplicationContext(),area, index, tmk, tmk_kcv);
+            ret = GcSmartPosUtils.getInstance().loadMainKeyByEnc(MainApp.getInstance().getApplicationContext(), area, index, tmk, tmk_kcv);
             display_show("loadMainKeyByEnc ret:" + ret);
-            ret = GcSmartPosUtils.getInstance().loadMacKey(MainApp.getInstance().getApplicationContext(),area, index, tak, tak_kcv);
+            ret = GcSmartPosUtils.getInstance().loadMacKey(MainApp.getInstance().getApplicationContext(), area, index, tak, tak_kcv);
             display_show("loadMacKey ret:" + ret);
-            ret = GcSmartPosUtils.getInstance().loadPinKey(MainApp.getInstance().getApplicationContext(),area, index, tpk, tpk_kcv);
+            ret = GcSmartPosUtils.getInstance().loadPinKey(MainApp.getInstance().getApplicationContext(), area, index, tpk, tpk_kcv);
             display_show("loadPinKey ret:" + ret);
-            ret = GcSmartPosUtils.getInstance().loadTrackKey(MainApp.getInstance().getApplicationContext(),area, index, tek, tek_kcv);
+            ret = GcSmartPosUtils.getInstance().loadTrackKey(MainApp.getInstance().getApplicationContext(), area, index, tek, tek_kcv);
             display_show("loadTrackKey ret:" + ret);
-            ret = GcSmartPosUtils.getInstance().loadTdesKeyByPlaintext(MainApp.getInstance().getApplicationContext(),area, index, tdkWithoutEnc);
+            ret = GcSmartPosUtils.getInstance().loadTdesKeyByPlaintext(MainApp.getInstance().getApplicationContext(), area, index, tdkWithoutEnc);
             display_show("loadTdesKeyByPlaintext ret:" + ret);
         } catch (Exception e) {
             e.printStackTrace();
@@ -137,15 +139,15 @@ public class TDESActivity extends Activity {
         try {
             display_clear();
 
-            int ret = GcSmartPosUtils.getInstance().loadMainKeyByPlaintext(MainApp.getInstance().getApplicationContext(),area, index, tlk);
+            int ret = GcSmartPosUtils.getInstance().loadMainKeyByPlaintext(MainApp.getInstance().getApplicationContext(), area, index, tlk);
             display_show("loadMainKeyByPlaintext ret:" + ret);
-            ret = GcSmartPosUtils.getInstance().loadMacKey(MainApp.getInstance().getApplicationContext(),area, index, tak, tak_kcv);
+            ret = GcSmartPosUtils.getInstance().loadMacKey(MainApp.getInstance().getApplicationContext(), area, index, tak, tak_kcv);
             display_show("loadMacKey ret:" + ret);
-            ret = GcSmartPosUtils.getInstance().loadPinKey(MainApp.getInstance().getApplicationContext(),area, index, tpk, tpk_kcv);
+            ret = GcSmartPosUtils.getInstance().loadPinKey(MainApp.getInstance().getApplicationContext(), area, index, tpk, tpk_kcv);
             display_show("loadPinKey ret:" + ret);
-            ret = GcSmartPosUtils.getInstance().loadTrackKey(MainApp.getInstance().getApplicationContext(),area, index, tek, tek_kcv);
+            ret = GcSmartPosUtils.getInstance().loadTrackKey(MainApp.getInstance().getApplicationContext(), area, index, tek, tek_kcv);
             display_show("loadTrackKey ret:" + ret);
-            ret = GcSmartPosUtils.getInstance().loadTdesKeyByPlaintext(MainApp.getInstance().getApplicationContext(),area, index, tdkWithoutEnc);
+            ret = GcSmartPosUtils.getInstance().loadTdesKeyByPlaintext(MainApp.getInstance().getApplicationContext(), area, index, tdkWithoutEnc);
             display_show("loadTdesKeyByPlaintext ret:" + ret);
         } catch (Exception e) {
             e.printStackTrace();
@@ -159,23 +161,23 @@ public class TDESActivity extends Activity {
             @Override
             public void run() {
                 try {
-                    PinpadResult kcv = GcSmartPosUtils.getInstance().getTdesKeyKcv(MainApp.getInstance().getApplicationContext(),PosConstants.PinPad.KeyType.PROTECT_KEY, area, index);
+                    PinpadResult kcv = GcSmartPosUtils.getInstance().getTdesKeyKcv(MainApp.getInstance().getApplicationContext(), PosConstants.PinPad.KeyType.PROTECT_KEY, area, index);
                     display_show("Expected value:\r\n" + tlk_kcv);
                     display_show("Actual PROTECT_KEY kcv:\n" + kcv.toString());
-                    kcv = GcSmartPosUtils.getInstance().getTdesKeyKcv(MainApp.getInstance().getApplicationContext(),PosConstants.PinPad.KeyType.MAIN_KEY, area, index);
+                    kcv = GcSmartPosUtils.getInstance().getTdesKeyKcv(MainApp.getInstance().getApplicationContext(), PosConstants.PinPad.KeyType.MAIN_KEY, area, index);
                     display_show("Expected value:\r\n" + tmk_kcv);
                     display_show("Actual MAIN_KEY kcv:\n" + kcv.toString());
-                    kcv = GcSmartPosUtils.getInstance().getTdesKeyKcv(MainApp.getInstance().getApplicationContext(),PosConstants.PinPad.KeyType.MAC_KEY, area, index);
+                    kcv = GcSmartPosUtils.getInstance().getTdesKeyKcv(MainApp.getInstance().getApplicationContext(), PosConstants.PinPad.KeyType.MAC_KEY, area, index);
                     display_show("Expected value:\r\n" + tak_kcv);
                     display_show("Actual MAC_KEY kcv:\n" + kcv.toString());
-                    kcv = GcSmartPosUtils.getInstance().getTdesKeyKcv(MainApp.getInstance().getApplicationContext(),PosConstants.PinPad.KeyType.PIN_KEY, area, index);
+                    kcv = GcSmartPosUtils.getInstance().getTdesKeyKcv(MainApp.getInstance().getApplicationContext(), PosConstants.PinPad.KeyType.PIN_KEY, area, index);
                     display_show("Expected value:\r\n" + tpk_kcv);
                     display_show("Actual PIN_KEY kcv:\n" + kcv.toString());
-                    kcv = GcSmartPosUtils.getInstance().getTdesKeyKcv(MainApp.getInstance().getApplicationContext(),PosConstants.PinPad.KeyType.TRACK_KEY, area, index);
+                    kcv = GcSmartPosUtils.getInstance().getTdesKeyKcv(MainApp.getInstance().getApplicationContext(), PosConstants.PinPad.KeyType.TRACK_KEY, area, index);
                     display_show("Expected value:\r\n" + tek_kcv);
                     display_show("Actual TRACK_KEY kcv:\n" + kcv.toString());
 
-                    kcv = GcSmartPosUtils.getInstance().getTdesKeyKcv(MainApp.getInstance().getApplicationContext(),PosConstants.PinPad.KeyType.TDES_KEY, area, index);
+                    kcv = GcSmartPosUtils.getInstance().getTdesKeyKcv(MainApp.getInstance().getApplicationContext(), PosConstants.PinPad.KeyType.TDES_KEY, area, index);
                     display_show("Expected value:\r\n" + tdk_kcv);
                     display_show("Actual TDES_KEY kcv:\n" + kcv.toString());
 
@@ -193,49 +195,49 @@ public class TDESActivity extends Activity {
             PinpadResult data = new PinpadResult();
             display_show("plaintext:" + plaintext);
             display_show("CBC iv:" + iv);
-            data = GcSmartPosUtils.getInstance().encryptData(MainApp.getInstance().getApplicationContext(),area, index, PosConstants.PinPad.KeyType.MAC_KEY, plaintext, null);
+            data = GcSmartPosUtils.getInstance().encryptData(MainApp.getInstance().getApplicationContext(), area, index, PosConstants.PinPad.KeyType.MAC_KEY, plaintext, null);
             display_show("Expected value:\n" + cipertext_tak);
             display_show("ECB encryptData MAC_KEY:\n" + data.toString());
-            data = GcSmartPosUtils.getInstance().encryptData(MainApp.getInstance().getApplicationContext(),area, index, PosConstants.PinPad.KeyType.PIN_KEY, plaintext, null);
+            data = GcSmartPosUtils.getInstance().encryptData(MainApp.getInstance().getApplicationContext(), area, index, PosConstants.PinPad.KeyType.PIN_KEY, plaintext, null);
             display_show("Expected value:\n" + cipertext_tpk);
             display_show("ECB encryptData PIN_KEY:\n" + data.toString());
-            data = GcSmartPosUtils.getInstance().encryptData(MainApp.getInstance().getApplicationContext(),area, index, PosConstants.PinPad.KeyType.TRACK_KEY, plaintext, null);
+            data = GcSmartPosUtils.getInstance().encryptData(MainApp.getInstance().getApplicationContext(), area, index, PosConstants.PinPad.KeyType.TRACK_KEY, plaintext, null);
             display_show("Expected value:\n" + cipertext_tek);
             display_show("ECB encryptData TRACK_KEY:\n" + data.toString());
-            data = GcSmartPosUtils.getInstance().encryptData(MainApp.getInstance().getApplicationContext(),area, index, PosConstants.PinPad.KeyType.TDES_KEY, plaintext, null);
+            data = GcSmartPosUtils.getInstance().encryptData(MainApp.getInstance().getApplicationContext(), area, index, PosConstants.PinPad.KeyType.TDES_KEY, plaintext, null);
             display_show("Expected value:\n" + cipertext_tdesk);
             display_show("ECB encryptData TDES_KEY:\n" + data.toString());
 
-            data = GcSmartPosUtils.getInstance().encryptData(MainApp.getInstance().getApplicationContext(),area, index, PosConstants.PinPad.KeyType.MAC_KEY, plaintext, iv);
+            data = GcSmartPosUtils.getInstance().encryptData(MainApp.getInstance().getApplicationContext(), area, index, PosConstants.PinPad.KeyType.MAC_KEY, plaintext, iv);
             display_show("Expected value:\n" + cbccipertext_tak);
             display_show("CBC encryptData MAC_KEY:\n" + data.toString());
-            data = GcSmartPosUtils.getInstance().encryptData(MainApp.getInstance().getApplicationContext(),area, index, PosConstants.PinPad.KeyType.PIN_KEY, plaintext, iv);
+            data = GcSmartPosUtils.getInstance().encryptData(MainApp.getInstance().getApplicationContext(), area, index, PosConstants.PinPad.KeyType.PIN_KEY, plaintext, iv);
             display_show("Expected value:\n" + cbccipertext_tpk);
             display_show("CBC encryptData PIN_KEY:\n" + data.toString());
-            data = GcSmartPosUtils.getInstance().encryptData(MainApp.getInstance().getApplicationContext(),area, index, PosConstants.PinPad.KeyType.TRACK_KEY, plaintext, iv);
+            data = GcSmartPosUtils.getInstance().encryptData(MainApp.getInstance().getApplicationContext(), area, index, PosConstants.PinPad.KeyType.TRACK_KEY, plaintext, iv);
             display_show("Expected value:\n" + cbccipertext_tek);
             display_show("CBC encryptData TRACK_KEY:\n" + data.toString());
-            data = GcSmartPosUtils.getInstance().encryptData(MainApp.getInstance().getApplicationContext(),area, index, PosConstants.PinPad.KeyType.TDES_KEY, plaintext, iv);
+            data = GcSmartPosUtils.getInstance().encryptData(MainApp.getInstance().getApplicationContext(), area, index, PosConstants.PinPad.KeyType.TDES_KEY, plaintext, iv);
             display_show("Expected value:\n" + cbccipertext_tdesk);
             display_show("CBC encryptData TDES_KEY:\n" + data.toString());
 
-            data = GcSmartPosUtils.getInstance().decryptData(MainApp.getInstance().getApplicationContext(),area, index, PosConstants.PinPad.KeyType.MAC_KEY, cipertext_tak, null);
+            data = GcSmartPosUtils.getInstance().decryptData(MainApp.getInstance().getApplicationContext(), area, index, PosConstants.PinPad.KeyType.MAC_KEY, cipertext_tak, null);
             display_show("Expected value:\n" + plaintext);
             display_show("ECB decryptData MAC_KEY:\n" + data.toString());
-            data = GcSmartPosUtils.getInstance().decryptData(MainApp.getInstance().getApplicationContext(),area, index, PosConstants.PinPad.KeyType.TRACK_KEY, cipertext_tek, null);
+            data = GcSmartPosUtils.getInstance().decryptData(MainApp.getInstance().getApplicationContext(), area, index, PosConstants.PinPad.KeyType.TRACK_KEY, cipertext_tek, null);
             display_show("Expected value:\n" + plaintext);
             display_show("ECB decryptData TRACK_KEY:\n" + data.toString());
-            data = GcSmartPosUtils.getInstance().decryptData(MainApp.getInstance().getApplicationContext(),area, index, PosConstants.PinPad.KeyType.TDES_KEY, cipertext_tdesk, null);
+            data = GcSmartPosUtils.getInstance().decryptData(MainApp.getInstance().getApplicationContext(), area, index, PosConstants.PinPad.KeyType.TDES_KEY, cipertext_tdesk, null);
             display_show("Expected value:\n" + plaintext);
             display_show("ECB decryptData TDES_KEY:\n" + data.toString());
 
-            data = GcSmartPosUtils.getInstance().decryptData(MainApp.getInstance().getApplicationContext(),area, index, PosConstants.PinPad.KeyType.MAC_KEY, cbccipertext_tak, iv);
+            data = GcSmartPosUtils.getInstance().decryptData(MainApp.getInstance().getApplicationContext(), area, index, PosConstants.PinPad.KeyType.MAC_KEY, cbccipertext_tak, iv);
             display_show("Expected value:\n" + plaintext);
             display_show("CBC decryptData MAC_KEY:\n" + data.toString());
-            data = GcSmartPosUtils.getInstance().decryptData(MainApp.getInstance().getApplicationContext(),area, index, PosConstants.PinPad.KeyType.TRACK_KEY, cbccipertext_tek, iv);
+            data = GcSmartPosUtils.getInstance().decryptData(MainApp.getInstance().getApplicationContext(), area, index, PosConstants.PinPad.KeyType.TRACK_KEY, cbccipertext_tek, iv);
             display_show("Expected value:\n" + plaintext);
             display_show("CBC decryptData TRACK_KEY:\n" + data.toString());
-            data = GcSmartPosUtils.getInstance().decryptData(MainApp.getInstance().getApplicationContext(),area, index, PosConstants.PinPad.KeyType.TDES_KEY, cbccipertext_tdesk, iv);
+            data = GcSmartPosUtils.getInstance().decryptData(MainApp.getInstance().getApplicationContext(), area, index, PosConstants.PinPad.KeyType.TDES_KEY, cbccipertext_tdesk, iv);
             display_show("Expected value:\n" + plaintext);
             display_show("CBC decryptData TDES_KEY:\n" + data.toString());
 
@@ -248,22 +250,40 @@ public class TDESActivity extends Activity {
         display_clear();
         try {
             PinpadResult data = new PinpadResult();
-            display_show("mac_plaintext:" + mac_plaintext);
-            data = GcSmartPosUtils.getInstance().calcMAC(MainApp.getInstance().getApplicationContext(),area, index, mac_plaintext, PosConstants.PinPad.TdesMacKeyMode.MAC_MOD1);//OK
-            display_show("Expected value:\n" + "0A2CC38A6CF6C415");
-            display_show("calcMAC MAC_MOD1:\n" + data.toString());
-            data = GcSmartPosUtils.getInstance().calcMAC(MainApp.getInstance().getApplicationContext(),area, index, mac_plaintext, PosConstants.PinPad.TdesMacKeyMode.MAC_MOD2);//OK
-            display_show("Expected value:\n" + "F35024717F9F2B4D");
-            display_show("calcMAC MAC_MOD2:\n" + data.toString());
-            data = GcSmartPosUtils.getInstance().calcMAC(MainApp.getInstance().getApplicationContext(),area, index, mac_plaintext, PosConstants.PinPad.TdesMacKeyMode.MAC_MOD919);//OK
-            display_show("Expected value:\n" + "1F2B21AAAC673D0C");
-            display_show("calcMAC MAC_MOD919:\n" + data.toString());
-            data = GcSmartPosUtils.getInstance().calcMAC(MainApp.getInstance().getApplicationContext(),area, index, mac_plaintext, PosConstants.PinPad.TdesMacKeyMode.MAC_ECB);//OK
-            display_show("Expected value:\n" + "3545364246414642");
+            //display_show("mac_plaintext:"+mac_plaintext);
+            /*
+            data = mPinpadOption.calcMAC(area,index,mac_plaintext, AidlConstants.PinPad.TdesMacKeyMode.MAC_MOD1);//OK
+            display_show("Expected value:\n"+"0A2CC38A6CF6C415");
+            display_show("calcMAC MAC_MOD1:\n"+data.toString());
+            data = mPinpadOption.calcMAC(area,index,mac_plaintext,AidlConstants.PinPad.TdesMacKeyMode.MAC_MOD2);//OK
+            display_show("Expected value:\n"+"F35024717F9F2B4D");
+            display_show("calcMAC MAC_MOD2:\n"+data.toString());
+            data = mPinpadOption.calcMAC(area,index,mac_plaintext,AidlConstants.PinPad.TdesMacKeyMode.MAC_MOD919);//OK
+            display_show("Expected value:\n"+"1F2B21AAAC673D0C");
+            display_show("calcMAC MAC_MOD919:\n"+data.toString());
+            data = mPinpadOption.calcMAC(area,index,mac_plaintext,AidlConstants.PinPad.TdesMacKeyMode.MAC_ECB);//OK
+            display_show("Expected value:\n"+"3545364246414642");
+            display_show("calcMAC MAC_ECB:\n"+data.toString());
+            data = mPinpadOption.calcMAC(area,index,mac_plaintext,AidlConstants.PinPad.TdesMacKeyMode.MAC_MOD99);//OK
+            display_show("Expected value:\n"+"09046F3A5AE6939D");
+            display_show("calcMAC MAC_MOD99:\n"+data.toString());
+            */
+
+            String temp = "{\"code\":\"9999\",\"data\":null,\"message\":\"System Error\",\"success\":false}1713409364361";
+            display_show("mac_plaintext:" + temp);
+
+            byte[] bTemp = temp.getBytes();
+            String sTemp = BCDHelper.bcdToString(bTemp, 0, bTemp.length);
+
+            data = GcSmartPosUtils.getInstance().calcMAC(MainApp.getInstance().getApplicationContext(),
+                    area, index, sTemp, PosConstants.PinPad.TdesMacKeyMode.MAC_ECB);//OK
             display_show("calcMAC MAC_ECB:\n" + data.toString());
-            data = GcSmartPosUtils.getInstance().calcMAC(MainApp.getInstance().getApplicationContext(),area, index, mac_plaintext, PosConstants.PinPad.TdesMacKeyMode.MAC_MOD99);//OK
-            display_show("Expected value:\n" + "09046F3A5AE6939D");
-            display_show("calcMAC MAC_MOD99:\n" + data.toString());
+
+            String key = "1234567890ABCDEF0987654321ABCDEF1234567890ABCDEF";
+            String result = DESUtil.DESedeMAC(temp, key);
+            Log.e(TAG, "result:" + result);
+
+            display_show("calcMAC DESedeMAC:\n" + result);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -274,7 +294,7 @@ public class TDESActivity extends Activity {
         try {
             PinpadResult data = new PinpadResult();
             display_show("magtrack_plaintext:" + magtrack_plaintext);
-            data = GcSmartPosUtils.getInstance().encryptMagTrack(MainApp.getInstance().getApplicationContext(),area, index, magtrack_plaintext);
+            data = GcSmartPosUtils.getInstance().encryptMagTrack(MainApp.getInstance().getApplicationContext(), area, index, magtrack_plaintext);
             display_show("Expected value:\r\n" + msgtrack_cipertest);
             display_show("encryptMagTrack:\r\n" + data.toString());
         } catch (Exception e) {
@@ -282,7 +302,7 @@ public class TDESActivity extends Activity {
         }
     }
 
-    public void inputonlinepin(View v) {
+    public void inputonlinepinRandom(View v) {
         pinpadDialog = new PinpadDialog(this, "6225760802344445", area, index, 2, 60 * 1000, new OnPinpadDialogListener() {
             @Override
             public void onError(int errCode, String msg) {
@@ -305,5 +325,26 @@ public class TDESActivity extends Activity {
         pinpadDialog.show();
     }
 
+    public void inputonlinepinFixed(View v) {
+        pinpadDialog = new PinpadDialog(this, "6225760802344445", area, index, 2, 60 * 1000, false, new OnPinpadDialogListener() {
+            @Override
+            public void onError(int errCode, String msg) {
+                Log.e(TAG, "inputonlinepin onError:" + errCode);
+            }
 
+            @Override
+            public void onConfirm(byte[] data, boolean isNonePin) {
+                Log.e(TAG, "inputonlinepin onConfirm isNonePin:" + isNonePin);
+                if (data != null) {
+                    Log.e(TAG, "inputonlinepin onConfirm data:" + BCDHelper.bcdToString(data, 0, data.length));
+                }
+            }
+
+            @Override
+            public void onCancel() {
+                Log.e(TAG, "inputonlinepin onCancle");
+            }
+        });
+        pinpadDialog.show();
+    }
 }

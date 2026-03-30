@@ -26,16 +26,6 @@ public class BankActivity extends BaseAppCompatActivity {
         findViewById(R.id.bank_card).setOnClickListener(this);
     }
 
-    byte[] apdu = new byte[] {
-            (byte) 0x00,
-            (byte) 0xA4,
-            (byte) 0x00,
-            (byte) 0x00,
-            (byte) 0x02,
-            (byte) 0x3F,
-            (byte) 0x00
-    };
-
     @Override
     public void onClick(View v) {
         super.onClick(v);
@@ -54,7 +44,7 @@ public class BankActivity extends BaseAppCompatActivity {
     }
 
 
-    private static class BankCardReaderClass extends BankCardReaderListener.Stub {
+    private class BankCardReaderClass extends BankCardReaderListener.Stub {
 
         @Override
         public void findMagCard(Bundle info) throws RemoteException {

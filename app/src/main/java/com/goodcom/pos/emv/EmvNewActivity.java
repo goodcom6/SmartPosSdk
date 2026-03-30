@@ -34,10 +34,11 @@ public class EmvNewActivity extends Activity {
         }
     };
 
-
-    public void StartEmv(View view) {
+    public void StartEmv1(View view) {
         try {
             clearDisplay();
+            EmvConfigNew.loadAid1();
+            //EmvConfigNew1.loadAid1();
             mAmount = mEditAmount.getText().toString();
             Long parseLong = Long.parseLong(mAmount);
             if (parseLong > 0) {
@@ -48,6 +49,35 @@ public class EmvNewActivity extends Activity {
         }
     }
 
+    public void StartEmv2(View view) {
+        try {
+            clearDisplay();
+            EmvConfigNew.loadAid2();
+            //EmvConfigNew1.loadAid2();
+            mAmount = mEditAmount.getText().toString();
+            Long parseLong = Long.parseLong(mAmount);
+            if (parseLong > 0) {
+                transactProcess(mAmount);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void StartEmv(View view) {
+        try {
+            clearDisplay();
+            EmvConfigNew.loadAid();
+            // EmvConfigNew1.loadAid();
+            mAmount = mEditAmount.getText().toString();
+            Long parseLong = Long.parseLong(mAmount);
+            if (parseLong > 0) {
+                transactProcess(mAmount);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -86,7 +116,7 @@ public class EmvNewActivity extends Activity {
         Bundle bundle = new Bundle();
         bundle.putInt(PosConstants.EMV.EmvTransDataConstraints.TRANS_TYPE, PosConstants.EMV.EmvTransType.EMV_GOODS);
         bundle.putLong(PosConstants.EMV.EmvTransDataConstraints.TRANS_AMOUNT, Long.parseLong(amount));
-        bundle.putLong(PosConstants.EMV.EmvTransDataConstraints.TRANS_AMOUNT_OTHER, 0);
+//      bundle.putLong(AidlConstants.EMV.EmvTransDataConstraints.TRANS_AMOUNT_OTHER, 2000);
         int mode = PosConstants.EMV.EmvSupportCardType.DEVICE_CONTACT | PosConstants.EMV.EmvSupportCardType.DEVICE_CONTACTLESS | PosConstants.EMV.EmvSupportCardType.DEVICE_MAGSTRIPE;
         // int mode = PosConstants.EMV.EmvSupportCardType.DEVICE_CONTACT | PosConstants.EMV.EmvSupportCardType.DEVICE_MAGSTRIPE;
         bundle.putInt(PosConstants.EMV.EmvTransDataConstraints.TRANS_MODE, mode);
@@ -101,7 +131,9 @@ public class EmvNewActivity extends Activity {
         bundle.putInt(PosConstants.EMV.EmvTransDataConstraints.ENC_TRACK_KEY_ALGO,
                 PosConstants.PinPad.TrackAlgoType.TRACK_ALGO_DUKPT);      //Use Dukpt Encryp
         bundle.putString(PosConstants.EMV.EmvTransDataConstraints.ENC_TRACK_IV, "0000000000000000");  //Key Index
-        bundle.putByte(PosConstants.EMV.EmvTransDataConstraints.ENC_TRACK_PADDING, (byte) 0xFF);  //Key Index
+        bundle.putBoolean(PosConstants.EMV.EmvTransDataConstraints.FORCE_SCRIPT_WHEN_DECLINED,true);
+        bundle.putBoolean(PosConstants.EMV.EmvTransDataConstraints.SKIP_ONLY_ONLINE_CHECK,true);
+        bundle.putBoolean(PosConstants.EMV.EmvTransDataConstraints.DISABLE_LED_IN_KERNEL, true);
 
         GcSmartPosUtils.getInstance().startTransaction(MainApp.getInstance().getApplicationContext(),
                 bundle, new EmvLister(this, onEmvListerCallback));

@@ -123,30 +123,38 @@ public class DukptActivity extends Activity {
         }
     }
 
-    public void InputDukptPin(View view){
-                PinpadDialog pinpadDialog = new PinpadDialog(this, "5236497927826910", 1, 1, 1, 60, new OnPinpadDialogListener() {
-                    @Override
-                    public void onError(int errCode, String msg) {
-                        Log.e(TAG, "inputonlinepin onError:" + errCode);
-                        display_show("inputonlinepin onError:" + errCode);
-                    }
+    public void InputDukptPinRandom(View view){
+        InputDukptPin(true);
+    }
 
-                    @Override
-                    public void onConfirm(byte[] data, boolean isNonePin) {
-                        Log.e(TAG, "inputonlinepin onConfirm isNonePin:" + isNonePin);
-                        display_show("inputonlinepin onConfirm isNonePin:" + isNonePin);
-                        if (data != null) {
-                            Log.e(TAG, "inputonlinepin onConfirm data:" + BCDHelper.bcdToString(data, 0, data.length));
-                            display_show("inputonlinepin onConfirm data:" + BCDHelper.bcdToString(data, 0, data.length));
-                        }
-                    }
+    public void InputDukptPinFixed(View view){
+        InputDukptPin(false);
+    }
 
-                    @Override
-                    public void onCancel() {
-                        Log.e(TAG, "inputonlinepin onCancle");
-                        display_show("inputonlinepin onCancle");
-                    }
-                });
-                pinpadDialog.show();
+    private void InputDukptPin(boolean isRandom){
+        PinpadDialog pinpadDialog = new PinpadDialog(this, "5236497927826910", 1, 1, 1, 60, isRandom,new OnPinpadDialogListener() {
+            @Override
+            public void onError(int errCode, String msg) {
+                Log.e(TAG, "inputonlinepin onError:" + errCode);
+                display_show("inputonlinepin onError:" + errCode);
+            }
+
+            @Override
+            public void onConfirm(byte[] data, boolean isNonePin) {
+                Log.e(TAG, "inputonlinepin onConfirm isNonePin:" + isNonePin);
+                display_show("inputonlinepin onConfirm isNonePin:" + isNonePin);
+                if (data != null) {
+                    Log.e(TAG, "inputonlinepin onConfirm data:" + BCDHelper.bcdToString(data, 0, data.length));
+                    display_show("inputonlinepin onConfirm data:" + BCDHelper.bcdToString(data, 0, data.length));
+                }
+            }
+
+            @Override
+            public void onCancel() {
+                Log.e(TAG, "inputonlinepin onCancle");
+                display_show("inputonlinepin onCancle");
+            }
+        });
+        pinpadDialog.show();
     }
 }

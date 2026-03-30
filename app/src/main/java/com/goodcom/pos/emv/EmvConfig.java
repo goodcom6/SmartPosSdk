@@ -30,38 +30,39 @@ public class EmvConfig {
 
     public static void loadTerminal() {
         Bundle bundle = new Bundle();
-
         // EMV TAG 9F1C Len 8
         bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.TERMINAL_ID, "Terminal".getBytes());
+        // EMV TAG 9F1A Len 2
+        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.TERMINAL_COUNTRY_CODE, "0156".getBytes());
+        // EMV TAG 9F39 Len 1
+        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.TERMINAL_ENTRY_MODE, "05".getBytes());
         // EMV TAG 9F16 Len 15
         bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.MERCHANT_ID, "000000000000000".getBytes());
-        // EMV TAG 9F15 Len 4
-        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.MERCHANT_CATEGORY_CODE, "0840".getBytes());
+        // EMV TAG 9F15 Len 2
+        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.MERCHANT_CATEGORY_CODE, "0156".getBytes());
         // EMV TAG 9F4E Len V
-        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.MERCHANT_NAME, "Railway Operator".getBytes());
-        // EMV TAG 9F1A Len 4
-        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.TERMINAL_COUNTRY_CODE, "0840".getBytes());
-        // EMV TAG 5F2A Len 4
-        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.TRANS_CURRENCY_CODE, "0840".getBytes());
-        // EMV TAG 5F36 Len 2
+        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.MERCHANT_NAME, "SmartPeak".getBytes());
+        // EMV TAG 5F2A Len 2
+        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.TRANS_CURRENCY_CODE, "0156".getBytes());
+        // EMV TAG 5F36 Len 1
         bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.TRANS_CURRENCY_EXP, "02".getBytes());
-        // EMV TAG 9F3C Len 4
-        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.TRANS_REFER_CURRENCY_CODE, "0840".getBytes());
-        // EMV TAG 9F3D Len 2
+        // EMV TAG 9F3C Len 2
+        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.TRANS_REFER_CURRENCY_CODE, "0156".getBytes());
+        // EMV TAG 9F3D Len 1
         bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.TRANS_REFER_CURRENCY_EXP, "02".getBytes());
-
-        // EMV TAG 9F35 Len 2
-        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.TERMINAL_TYPE, "22".getBytes());
-        // EMV TAG 9F33 Len 6
-        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.TERMINAL_CAPABILITY, "E0F8C8".getBytes());
-        // EMV TAG 9F40 Len 10
-        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.TERMINAL_ADDITIONAL_CAPABILITY, "F000F0F001".getBytes());
         // EMV TAG 9F1E Len 8
-//        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.IFD_SERIAL_NUMBER,
-//                POIGeneralAPI.getDefault().getVersion(POIGeneralAPI.VERSION_TYPE_DSN).getBytes());
-        // EMV TAG 9F39 Len 2
-        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.TERMINAL_ENTRY_MODE, "05".getBytes());
+        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.IFD_SERIAL_NUMBER, "1122334455667788".getBytes());
 
+        GcSmartPosUtils.getInstance().EmvSetTerminal(MainApp.getInstance().getApplicationContext(), PosConstants.EMV.EmvTerminalConstraints.TYPE_TERMINAL, bundle);
+
+
+        //EMV configuration
+        // EMV TAG 9F35 Len 1
+        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.TERMINAL_TYPE, "22".getBytes());
+        // EMV TAG 9F33 Len 3
+        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.TERMINAL_CAPABILITY, "E0F8C8".getBytes());
+        // EMV TAG 9F40 Len 5
+        bundle.putByteArray(PosConstants.EMV.EmvTerminalConstraints.TERMINAL_ADDITIONAL_CAPABILITY, "F000F0F001".getBytes());
         // EMV default configuration.
         bundle.putBoolean(PosConstants.EMV.EmvTerminalConstraints.PSE, true);
         bundle.putBoolean(PosConstants.EMV.EmvTerminalConstraints.CARD_HOLDER_CONFIRM, true);
@@ -78,12 +79,11 @@ public class EmvConfig {
         bundle.putBoolean(PosConstants.EMV.EmvTerminalConstraints.REVOCATION_ISSUER_PUBLIC_KEY, true);
         bundle.putBoolean(PosConstants.EMV.EmvTerminalConstraints.ISSUER_REFERRAL, false);
         bundle.putBoolean(PosConstants.EMV.EmvTerminalConstraints.UNABLE_TO_GO_ONLINE, false);
-
         // Mandatory online, mandatory approval.
         bundle.putBoolean(PosConstants.EMV.EmvTerminalConstraints.FORCED_ONLINE, false);
         bundle.putBoolean(PosConstants.EMV.EmvTerminalConstraints.FORCED_ACCEPT, false);
 
-        GcSmartPosUtils.getInstance().EmvSetTerminal(MainApp.getInstance().getApplicationContext(), PosConstants.EMV.EmvTerminalConstraints.TYPE_TERMINAL, bundle);
+        GcSmartPosUtils.getInstance().EmvSetTerminal(MainApp.getInstance().getApplicationContext(), PosConstants.EMV.EmvTerminalConstraints.TYPE_CONFIG, bundle);
     }
 
     public static void loadAid1() throws RemoteException {
@@ -135,29 +135,42 @@ public class EmvConfig {
         aid = addAid("A000000003", "008C");
         aid.ContactlessTransLimit = 200001;
         aid.ContactlessCVMLimit = 1;
+        aid.SelectIndicator = true;
         // Log.e(TAG,"aid:"+aid.toString());
-        if (aid.TerminalType != null) {
-            Log.e(TAG, "aid.TerminalType:" + aid.TerminalType.length);
+        if(aid.TerminalType != null){
+            Log.e(TAG,"aid.TerminalType:"+aid.TerminalType.length);
         }
         GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(), aid);
 
         aid = addAid("A0000000031010", "008C");
-        aid.ContactlessTransLimit = 200001;
-        aid.ContactlessCVMLimit = 1;
-        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(), aid);
-
-        aid = addAid("A0000000032010", "008C");
-        aid.ContactlessTransLimit = 200001;
-        aid.ContactlessCVMLimit = 1;
-        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(), aid);
-
-        aid = addAid("A0000000033010", "008C");
-        aid.ContactlessTransLimit = 200001;
+        aid.ContactlessTransLimit = 200002;
         aid.ContactlessCVMLimit = 200001;
+        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(), aid);
+
+//        aid = addAid("A0000000032010", "008C");
+//        aid.ContactlessTransLimit = 200001;
+//        aid.ContactlessCVMLimit = 1;
+//        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(), aid);
+//
+//        aid = addAid("A0000000033010", "008C");
+//        aid.ContactlessTransLimit = 200001;
+//        aid.ContactlessCVMLimit = 200001;
+//        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(), aid);
+
+        aid = addAid("A00000033301", "0020");
+        aid.SelectIndicator = true;
+        aid.ContactlessTransLimit = 300002;
+        aid.ContactlessCVMLimit = 300001;
+        aid.dDOL = PosUtils.hexStringToBytes("9F3704");
+        aid.tDOL = PosUtils.hexStringToBytes("9F3704");
+        aid.TACDenial = PosUtils.hexStringToBytes("0010000000");
+        aid.TACOnline = PosUtils.hexStringToBytes("d84004f800");
+        aid.TACDefault = PosUtils.hexStringToBytes("084000a800");
         GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(), aid);
 
         // Unionpay
         aid = addAid("A000000333", "0020");
+        aid.SelectIndicator = true;
         aid.dDOL = PosUtils.hexStringToBytes("9F3704");
         aid.tDOL = PosUtils.hexStringToBytes("9F3704");
         aid.TACDenial = PosUtils.hexStringToBytes("0010000000");
@@ -166,84 +179,87 @@ public class EmvConfig {
         GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(), aid);
 
         aid = addAid("A000000333010101", "0020");
+        aid.ContactlessTransLimit = 200002;
+        aid.ContactlessCVMLimit = 200001;
         aid.dDOL = PosUtils.hexStringToBytes("9F3704");
         aid.tDOL = PosUtils.hexStringToBytes("9F3704");
         aid.TACDenial = PosUtils.hexStringToBytes("0010000000");
         aid.TACOnline = PosUtils.hexStringToBytes("d84004f800");
         aid.TACDefault = PosUtils.hexStringToBytes("084000a800");
         GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(), aid);
-
-        aid = addAid("A000000333010102", "0020");
-        aid.dDOL = PosUtils.hexStringToBytes("9F3704");
-        aid.tDOL = PosUtils.hexStringToBytes("9F3704");
-        aid.TACDenial = PosUtils.hexStringToBytes("0010000000");
-        aid.TACOnline = PosUtils.hexStringToBytes("d84004f800");
-        aid.TACDefault = PosUtils.hexStringToBytes("084000a800");
-        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(), aid);
-
-        aid = addAid("A000000333010103", "0020");
-        aid.dDOL = PosUtils.hexStringToBytes("9F3704");
-        aid.tDOL = PosUtils.hexStringToBytes("9F3704");
-        aid.TACDenial = PosUtils.hexStringToBytes("0010000000");
-        aid.TACOnline = PosUtils.hexStringToBytes("d84004f800");
-        aid.TACDefault = PosUtils.hexStringToBytes("084000a800");
-        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(), aid);
-
-        aid = addAid("A000000333010106", "0020");
-        aid.dDOL = PosUtils.hexStringToBytes("9F3704");
-        aid.tDOL = PosUtils.hexStringToBytes("9F3704");
-        aid.TACDenial = PosUtils.hexStringToBytes("0010000000");
-        aid.TACOnline = PosUtils.hexStringToBytes("d84004f800");
-        aid.TACDefault = PosUtils.hexStringToBytes("084000a800");
-        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(), aid);
+//
+//        aid = addAid("A000000333010102", "0020");
+//        aid.dDOL = PosUtils.hexStringToBytes("9F3704");
+//        aid.tDOL = PosUtils.hexStringToBytes("9F3704");
+//        aid.TACDenial = PosUtils.hexStringToBytes("0010000000");
+//        aid.TACOnline = PosUtils.hexStringToBytes("d84004f800");
+//        aid.TACDefault = PosUtils.hexStringToBytes("084000a800");
+//        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(),aid);
+//
+//        aid = addAid("A000000333010103", "0020");
+//        aid.dDOL = PosUtils.hexStringToBytes("9F3704");
+//        aid.tDOL = PosUtils.hexStringToBytes("9F3704");
+//        aid.TACDenial = PosUtils.hexStringToBytes("0010000000");
+//        aid.TACOnline = PosUtils.hexStringToBytes("d84004f800");
+//        aid.TACDefault = PosUtils.hexStringToBytes("084000a800");
+//        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(),aid);
+//
+//        aid = addAid("A000000333010106", "0020");
+//        aid.dDOL = PosUtils.hexStringToBytes("9F3704");
+//        aid.tDOL = PosUtils.hexStringToBytes("9F3704");
+//        aid.TACDenial = PosUtils.hexStringToBytes("0010000000");
+//        aid.TACOnline = PosUtils.hexStringToBytes("d84004f800");
+//        aid.TACDefault = PosUtils.hexStringToBytes("084000a800");
+//        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(),aid);
 
         // MasterCard
-        aid = addAid("A000000004", "0002");
-        aid.dDOL = PosUtils.hexStringToBytes("9F3704");
-        aid.tDOL = PosUtils.hexStringToBytes("9F3704");
-        aid.TACDenial = PosUtils.hexStringToBytes("0400000000");
-        aid.TACOnline = PosUtils.hexStringToBytes("f850acf800");
-        aid.TACDefault = PosUtils.hexStringToBytes("fc50aca000");
-        aid.TerminalRiskManagementData = PosUtils.hexStringToBytes("6C00000000000000");
-        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(), aid);
+//        aid = addAid("A000000004", "0002");
+//        aid.SelectIndicator = true;
+//        aid.dDOL = PosUtils.hexStringToBytes("9F3704");
+//        aid.tDOL = PosUtils.hexStringToBytes("9F3704");
+//        aid.TACDenial = PosUtils.hexStringToBytes("0400000000");
+//        aid.TACOnline = PosUtils.hexStringToBytes("f850acf800");
+//        aid.TACDefault = PosUtils.hexStringToBytes("fc50aca000");
+//        aid.TerminalRiskManagementData = PosUtils.hexStringToBytes("6C00000000000000");
+//        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(),aid);
 
-        aid = addAid("A00000000410", "0002");
-        aid.dDOL = PosUtils.hexStringToBytes("9F3704");
-        aid.tDOL = PosUtils.hexStringToBytes("9F3704");
-        aid.TACDenial = PosUtils.hexStringToBytes("0400000000");
-        aid.TACOnline = PosUtils.hexStringToBytes("f850acf800");
-        aid.TACDefault = PosUtils.hexStringToBytes("fc50aca000");
-        aid.TerminalRiskManagementData = PosUtils.hexStringToBytes("6C00000000000000");
-        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(), aid);
+//        aid = addAid("A00000000410", "0002");
+//        aid.dDOL = PosUtils.hexStringToBytes("9F3704");
+//        aid.tDOL = PosUtils.hexStringToBytes("9F3704");
+//        aid.TACDenial = PosUtils.hexStringToBytes("0400000000");
+//        aid.TACOnline = PosUtils.hexStringToBytes("f850acf800");
+//        aid.TACDefault = PosUtils.hexStringToBytes("fc50aca000");
+//        aid.TerminalRiskManagementData = PosUtils.hexStringToBytes("6C00000000000000");
+//        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(),aid);
+//
+//        aid = addAid("A00000000430", "0002");
+//        aid.dDOL = PosUtils.hexStringToBytes("9F3704");
+//        aid.tDOL = PosUtils.hexStringToBytes("9F3704");
+//        aid.TACDenial = PosUtils.hexStringToBytes("0400000000");
+//        aid.TACOnline = PosUtils.hexStringToBytes("f850acf800");
+//        aid.TACDefault = PosUtils.hexStringToBytes("fc50aca000");
+//        aid.ContactlessCVMLimit = 50000;
+//        aid.TerminalRiskManagementData = PosUtils.hexStringToBytes("4C00800000000000");
+//        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(),aid);
 
-        aid = addAid("A00000000430", "0002");
-        aid.dDOL = PosUtils.hexStringToBytes("9F3704");
-        aid.tDOL = PosUtils.hexStringToBytes("9F3704");
-        aid.TACDenial = PosUtils.hexStringToBytes("0400000000");
-        aid.TACOnline = PosUtils.hexStringToBytes("f850acf800");
-        aid.TACDefault = PosUtils.hexStringToBytes("fc50aca000");
-        aid.ContactlessCVMLimit = 50000;
-        aid.TerminalRiskManagementData = PosUtils.hexStringToBytes("4C00800000000000");
-        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(), aid);
-
-        aid = addAid("A0000000043060", "0002");
-        aid.dDOL = PosUtils.hexStringToBytes("9F3704");
-        aid.tDOL = PosUtils.hexStringToBytes("9F3704");
-        aid.TACDenial = PosUtils.hexStringToBytes("0000800000");
-        aid.TACOnline = PosUtils.hexStringToBytes("fc50bcf800");
-        aid.TACDefault = PosUtils.hexStringToBytes("fc50bca000");
-        aid.ContactlessCVMLimit = 50000;
-        aid.TerminalRiskManagementData = PosUtils.hexStringToBytes("4C00800000000000");
-        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(), aid);
-
-        aid = addAid("A0000000041010", "0002");
-        aid.dDOL = PosUtils.hexStringToBytes("9F3704");
-        aid.tDOL = PosUtils.hexStringToBytes("9F3704");
-        aid.TACDenial = PosUtils.hexStringToBytes("0000000000");
-        aid.TACOnline = PosUtils.hexStringToBytes("fc50808800");
-        aid.TACDefault = PosUtils.hexStringToBytes("fc50b8a000");
-        aid.TerminalRiskManagementData = PosUtils.hexStringToBytes("6C00000000000000");
-        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(), aid);
+//        aid = addAid("A0000000043060", "0002");
+//        aid.dDOL = PosUtils.hexStringToBytes("9F3704");
+//        aid.tDOL = PosUtils.hexStringToBytes("9F3704");
+//        aid.TACDenial = PosUtils.hexStringToBytes("0000800000");
+//        aid.TACOnline = PosUtils.hexStringToBytes("fc50bcf800");
+//        aid.TACDefault = PosUtils.hexStringToBytes("fc50bca000");
+//        aid.ContactlessCVMLimit = 50000;
+//        aid.TerminalRiskManagementData = PosUtils.hexStringToBytes("4C00800000000000");
+//        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(),aid);
+//
+//        aid = addAid("A0000000041010", "0002");
+//        aid.dDOL = PosUtils.hexStringToBytes("9F3704");
+//        aid.tDOL = PosUtils.hexStringToBytes("9F3704");
+//        aid.TACDenial = PosUtils.hexStringToBytes("0000000000");
+//        aid.TACOnline = PosUtils.hexStringToBytes("fc50808800");
+//        aid.TACDefault = PosUtils.hexStringToBytes("fc50b8a000");
+//        aid.TerminalRiskManagementData = PosUtils.hexStringToBytes("6C00000000000000");
+//        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(),aid);
 
         // Discover
         aid = addAid("A000000152", "0001");
@@ -282,6 +298,15 @@ public class EmvConfig {
         aid = addAid("A00000002501", "0001");
         aid.dDOL = PosUtils.hexStringToBytes("9F3704");
         aid.tDOL = PosUtils.hexStringToBytes("9F3704");
+        aid.TACDenial = PosUtils.hexStringToBytes("0000000000");
+        aid.TACOnline = PosUtils.hexStringToBytes("c800000000");
+        aid.TACDefault = PosUtils.hexStringToBytes("c800000000");
+        GcSmartPosUtils.getInstance().EmvSetAid(MainApp.getInstance().getApplicationContext(), aid);
+
+        aid = addAid("A000000025010403", "0001");
+        aid.dDOL = PosUtils.hexStringToBytes("9F3704");
+        aid.tDOL = PosUtils.hexStringToBytes("9F3704");
+        aid.ContactlessCVMLimit = 200000l;
         aid.TACDenial = PosUtils.hexStringToBytes("0000000000");
         aid.TACOnline = PosUtils.hexStringToBytes("c800000000");
         aid.TACDefault = PosUtils.hexStringToBytes("c800000000");
@@ -350,7 +375,7 @@ public class EmvConfig {
         PosEmvAid appList = new PosEmvAid();
         appList.AID = PosUtils.hexStringToBytes(aid);
         appList.Version = PosUtils.hexStringToBytes(version);
-        appList.SelectIndicator = true;
+        appList.SelectIndicator = false;
         appList.dDOL = PosUtils.hexStringToBytes("9F0206");
         appList.tDOL = PosUtils.hexStringToBytes("9F3704");
         appList.TACDenial = PosUtils.hexStringToBytes("0010000000");
@@ -645,6 +670,8 @@ public class EmvConfig {
         if (qvsdcParameter.SupportOnlinePIN) {
             qualifiers[0] |= 0x04;
         }
+        qvsdcParameter.SupportSignature = false;
+
         if (qvsdcParameter.SupportSignature) {
             qualifiers[0] |= 0x02;
         }
@@ -709,10 +736,10 @@ public class EmvConfig {
         Bundle bundle = new Bundle();
         BerTlvBuilder tlvBuilder = new BerTlvBuilder();
 
-        tlvBuilder.addBerTlv(new BerTlv(new BerTag(PosConstants.EMV.EmvTerminalConstraints.TAG_MASTERCARD_SET_CVM_CAPABILITIES), HexUtil.parseHex("60")));
-        tlvBuilder.addBerTlv(new BerTlv(new BerTag(PosConstants.EMV.EmvTerminalConstraints.TAG_MASTERCARD_SET_NO_CVM_CAPABILITIES), HexUtil.parseHex("08")));
-        tlvBuilder.addBerTlv(new BerTlv(new BerTag(PosConstants.EMV.EmvTerminalConstraints.TAG_MASTERCARD_SET_MAGSTRIPE_CVM_CAPABILITIES), HexUtil.parseHex("10")));
-        tlvBuilder.addBerTlv(new BerTlv(new BerTag(PosConstants.EMV.EmvTerminalConstraints.TAG_MASTERCARD_SET_MAGSTRIPE_NO_CVM_CAPABILITIES), HexUtil.parseHex("00")));
+        tlvBuilder.addBerTlv(new BerTlv(new BerTag(PosConstants.EMV.EmvTerminalConstraints.TAG_MASTERCARD_SET_CVM_CAPABILITIES), HexUtil.parseHex("68")));
+        tlvBuilder.addBerTlv(new BerTlv(new BerTag(PosConstants.EMV.EmvTerminalConstraints.TAG_MASTERCARD_SET_NO_CVM_CAPABILITIES), HexUtil.parseHex("28")));
+        tlvBuilder.addBerTlv(new BerTlv(new BerTag(PosConstants.EMV.EmvTerminalConstraints.TAG_MASTERCARD_SET_MAGSTRIPE_CVM_CAPABILITIES), HexUtil.parseHex("68")));
+        tlvBuilder.addBerTlv(new BerTlv(new BerTag(PosConstants.EMV.EmvTerminalConstraints.TAG_MASTERCARD_SET_MAGSTRIPE_NO_CVM_CAPABILITIES), HexUtil.parseHex("28")));
         tlvBuilder.addBerTlv(new BerTlv(new BerTag(PosConstants.EMV.EmvTerminalConstraints.TAG_MASTERCARD_SET_DEFAULT_UDOL), HexUtil.parseHex("9F6A04")));
         tlvBuilder.addBerTlv(new BerTlv(new BerTag(PosConstants.EMV.EmvTerminalConstraints.TAG_MASTERCARD_SET_KERNEL_CONFIG), HexUtil.parseHex("30")));
 
@@ -1079,8 +1106,7 @@ public class EmvConfig {
         tlvBuilder.addBerTlv(new BerTlv(new BerTag(PosConstants.EMV.EmvDrlConstraints.TAG_DRL_SET_DELIMITER), drlToData(limit, entryPoint)));
 
         bundle.putByteArray(PosConstants.EMV.EmvDrlConstraints.CONFIG, tlvBuilder.buildArray());
-        int ret = GcSmartPosUtils.getInstance().EmvSetDRL(MainApp.getInstance().getApplicationContext(), PosConstants.EMV.EmvDrlConstraints.TYPE_VISA, bundle);
-        Log.e(TAG, "Bundle:" + bundle + "," + ret);
+        GcSmartPosUtils.getInstance().EmvSetDRL(MainApp.getInstance().getApplicationContext(), PosConstants.EMV.EmvDrlConstraints.TYPE_VISA, bundle);
     }
 
     public static void loadAmexDRL() throws RemoteException {
